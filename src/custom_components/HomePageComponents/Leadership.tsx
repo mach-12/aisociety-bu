@@ -82,7 +82,6 @@ export default function LeadershipSection() {
         </Carousel>
         <Button
           variant="link"
-          href="#leadership"
           className="mt-6 mx-auto block text-center"
         >
           Meet our leadership team

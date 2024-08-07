@@ -110,7 +110,6 @@ export default function NewsSection() {
         </Carousel>
         <Button
           variant="link"
-          href="#news"
           className="mt-6 mx-auto block text-center"
         >
           Read More Latest Developments

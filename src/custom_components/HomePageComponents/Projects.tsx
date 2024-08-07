@@ -88,7 +88,6 @@ export default function ProjectsSection() {
         </Carousel>
         <Button
           variant="link"
-          href="#projects"
           className="mt-6 mx-auto block text-center"
         >
           Explore our projects

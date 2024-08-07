@@ -88,7 +88,6 @@ export default function PublicationsSection() {
         </Carousel>
         <Button
           variant="link"
-          href="#publications"
           className="mt-6 mx-auto block text-center"
         >
           Check out our publications
