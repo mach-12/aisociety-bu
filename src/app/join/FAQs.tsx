@@ -5,7 +5,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqData = [
+type FAQ = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+const faqData: FAQ[] = [
   {
     id: "item-1",
     question: "Is it accessible?",
@@ -27,7 +33,7 @@ const faqData = [
 
 export default function FAQs() {
   return (
-    <div>
+    <div className="container mx-auto px-4 md:px-6">
       <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
         Frequently Asked Questions
       </h2>

@@ -6,8 +6,8 @@ export default function WhatIsAIS() {
       <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
         What is AI Society?
       </h2>
-      <div className="flex justify-start text-left gap-32">
-        <p className="w-1/2">
+      <div className="flex flex-col md:flex-row justify-start text-left gap-8 md:gap-32">
+        <p className="w-full md:w-1/2">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus soluta
           debitis id aspernatur ipsa quidem sed nesciunt optio assumenda
           suscipit fuga quasi repellendus, vero recusandae cupiditate voluptates
@@ -27,7 +27,7 @@ export default function WhatIsAIS() {
           width={500}
           height={500}
           alt="Logo"
-          className="mx-auto"
+          className="mx-auto md:w-1/2"
         />
       </div>
     </div>
