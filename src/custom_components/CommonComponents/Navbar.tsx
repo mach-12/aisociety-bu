@@ -21,7 +21,7 @@ import ShimmerButton from "../ShimmerCard";
 
 const Navbar = () => {
   return (
-    <header className="container mx-auto z-10 sticky top-2 px-6 md:px-12 py-2 text-foreground bg-white/60 backdrop-blur-lg border-2 rounded-xl shadow-xl flex items-center justify-between">
+    <header className="container mx-auto z-50 sticky top-2 px-6 md:px-12 py-2 text-foreground bg-white/60 backdrop-blur-lg border-2 rounded-xl shadow-xl flex items-center justify-between">
       <Link href="/">
         <div className="flex items-center gap-2">
           <Image
@@ -36,31 +36,23 @@ const Navbar = () => {
       </Link>
       <NavigationMenu>
         <NavigationMenuList className="hidden lg:flex gap-4">
-          {[
-            "About",
-            "Events",
-            "Team",
-            "Blog",
-            "Projects",
-            "Publications",
-          ].map((item) => (
-            <NavigationMenuItem key={item}>
-              <NavigationMenuLink asChild>
-                <Link
-                  href={`${item.toLowerCase()}`}
-                  className="font-bold hover:underline underline-offset-4"
-                >
-                  {item}
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          ))}
+          {["About", "Events", "Team", "Blog", "Projects", "Publications"].map(
+            (item) => (
+              <NavigationMenuItem key={item}>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href={`${item.toLowerCase()}`}
+                    className="font-bold hover:underline underline-offset-4"
+                  >
+                    {item}
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ),
+          )}
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link
-                href="join"
-                className="ml-6"
-              >
+              <Link href="join" className="ml-6">
                 <ShimmerButton text="Join Us" />
               </Link>
             </NavigationMenuLink>

@@ -44,9 +44,7 @@ export default function ProjectsSection() {
                     <Card className="cursor-pointer">
                       <CardHeader>
                         <CardTitle>{project.title}</CardTitle>
-                        <CardDescription>
-                          {project.description}
-                        </CardDescription>
+                        <CardDescription>{project.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <Image
@@ -86,10 +84,7 @@ export default function ProjectsSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <Button
-          variant="link"
-          className="mt-6 mx-auto block text-center"
-        >
+        <Button variant="link" className="mt-6 mx-auto block text-center">
           Explore our projects
         </Button>
       </div>

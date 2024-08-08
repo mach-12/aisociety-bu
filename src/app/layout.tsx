@@ -16,19 +16,19 @@ const fontBody = Manrope({
   variable: "--font-body",
 });
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={cn("antialiased p-4 md:p-6", fontHeading.variable, fontBody.variable)}
+        className={cn(
+          "antialiased p-4 md:p-6",
+          fontHeading.variable,
+          fontBody.variable,
+        )}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
