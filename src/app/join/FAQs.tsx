@@ -33,11 +33,11 @@ const faqData: FAQ[] = [
 
 export default function FAQs() {
   return (
-    <div className="container mx-auto px-4 md:px-6">
+    <div className="container mx-auto max-w-5xl px-4 md:px-6">
       <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
         Frequently Asked Questions
       </h2>
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full text-left">
         {faqData.map((faq) => (
           <AccordionItem key={faq.id} value={faq.id}>
             <AccordionTrigger>{faq.question}</AccordionTrigger>

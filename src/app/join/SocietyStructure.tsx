@@ -13,10 +13,10 @@ import Image from "next/image";
 
 export default function SocietyStructure() {
   return (
-    <div className="mx-auto max-w-2xl px-4">
-      <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
+    <div className="px-4 py-12 md:py-24 lg:py-32 mx-auto max-w-2xl">
+      <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
         Society Structure
-      </h2>
+      </h1>
       <Tabs defaultValue="new-structure" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="new-structure">AI Society Structure</TabsTrigger>
