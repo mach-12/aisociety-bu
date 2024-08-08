@@ -26,9 +26,9 @@ export default function SocietyStructure() {
           <Card>
             <CardContent className="space-y-2">
               <Image
-                src="https://picsum.photos/500/300?random=1"
-                width={600}
-                height={600}
+                src="/new-ais.png"
+                width={800}
+                height={800}
                 alt="Logo"
                 className="w-full h-auto"
               />
@@ -39,9 +39,9 @@ export default function SocietyStructure() {
           <Card>
             <CardContent className="space-y-2">
               <Image
-                src="https://picsum.photos/500/300?random=4"
-                width={600}
-                height={600}
+                src="/legacy-ais.png"
+                width={800}
+                height={800}
                 alt="Logo"
                 className="w-full h-auto"
               />
