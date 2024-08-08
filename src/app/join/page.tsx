@@ -11,19 +11,21 @@ import Footer from "@/custom_components/CommonComponents/Footer";
 
 export default function Join() {
   return (
-    <div className="min-h-screen text-center">
+    <div className="">
       <Navbar />
-      <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
-        Join
-      </h1>
-      <JoinUsBadge />
-      <WhatIsAIS />
-      <SocietyStructure />
-      <TeamStructure />
-      <HowToJoin />
-      <JoinUsBadge />
-      <FAQs />
-      <ContactUs />
+      <div className="flex flex-col gap-y-14 p-12 min-h-screen text-center">
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
+          Join Us
+        </h1>
+        <JoinUsBadge />
+        <WhatIsAIS />
+        <SocietyStructure />
+        <TeamStructure />
+        <HowToJoin />
+        <JoinUsBadge />
+        <FAQs />
+        <ContactUs />
+      </div>
       <Footer />
     </div>
   );

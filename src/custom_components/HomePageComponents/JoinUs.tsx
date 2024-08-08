@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function JoinUsSection() {
   return (
@@ -17,9 +18,11 @@ export default function JoinUsSection() {
           exciting projects, gain new skills, and connect with like-minded
           individuals.
         </p>
-        <Button size="lg" className="mt-6">
-          Join Now
-        </Button>
+        <Link href="/join">
+          <Button size="lg" className="mt-6">
+            Join Now
+          </Button>
+        </Link>
       </div>
     </section>
   );
