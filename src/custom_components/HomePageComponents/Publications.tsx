@@ -86,10 +86,7 @@ export default function PublicationsSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <Button
-          variant="link"
-          className="mt-6 mx-auto block text-center"
-        >
+        <Button variant="link" className="mt-6 mx-auto block text-center">
           Check out our publications
         </Button>
       </div>

@@ -46,9 +46,7 @@ export default function NewsSection() {
                     <Card className="cursor-pointer">
                       <CardHeader>
                         <CardTitle>{news.title}</CardTitle>
-                        <CardDescription>
-                          {news.description}
-                        </CardDescription>
+                        <CardDescription>{news.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <Image
@@ -81,9 +79,7 @@ export default function NewsSection() {
                   <DialogContent>
                     <DialogHeader>
                       <DialogTitle>{news.title}</DialogTitle>
-                      <DialogDescription>
-                        {news.description}
-                      </DialogDescription>
+                      <DialogDescription>{news.description}</DialogDescription>
                     </DialogHeader>
                     <p>Date: {news.date}</p>
                     <Image
@@ -108,10 +104,7 @@ export default function NewsSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <Button
-          variant="link"
-          className="mt-6 mx-auto block text-center"
-        >
+        <Button variant="link" className="mt-6 mx-auto block text-center">
           Read More Latest Developments
         </Button>
       </div>
