@@ -5,7 +5,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqData = [
+type FAQ = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+const faqData: FAQ[] = [
   {
     id: "item-1",
     question: "Is it accessible?",

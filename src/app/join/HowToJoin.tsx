@@ -3,7 +3,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
-const steps = [
+type Step = {
+  step: string;
+  title: string;
+  description: string;
+  avatar: string;
+  fallback: string;
+  formLink?: string;
+  dates: string;
+  status: string;
+  applications?: number;
+};
+
+const steps: Step[] = [
   {
     step: "Step 1",
     title: "Fill the Form",
@@ -40,7 +52,7 @@ const steps = [
 
 export default function HowToJoin() {
   return (
-    <section className="w-full ">
+    <section className="w-full">
       <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
         <div className="space-y-4 text-center">
           <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
@@ -55,7 +67,7 @@ export default function HowToJoin() {
                   <h5 className="text-md font-medium">{step.step}</h5>
                   <h4 className="text-lg font-semibold">{step.title}</h4>
                   <p className="text-muted-foreground">{step.description}</p>
-                  {index === 0 && (
+                  {index === 0 && step.applications && (
                     <p className="text-sm font-medium mt-2">
                       {step.applications} applications so far
                     </p>

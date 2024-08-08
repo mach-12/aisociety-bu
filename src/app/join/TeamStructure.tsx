@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,12 +9,31 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TrendingDown, TrendingUp } from "lucide-react";
 
+type Project = {
+  status: string;
+  title: string;
+  description: string;
+};
+
+type Trend = {
+  trend: string;
+  direction: "up" | "down";
+};
+
+type Content = {
+  title: string;
+  description: string;
+  potentialProjects: Project[];
+  workDone: string[];
+  latestTrends: Trend[];
+  responsibilities: string[];
+};
+
 // Placeholder content for dynamic loading
-const placeholderContent = {
+const placeholderContent: Record<string, Content> = {
   GEN_AI: {
     title: "Generative AI",
     description:
@@ -157,7 +177,11 @@ const placeholderContent = {
   },
 };
 
-function DynamicCard({ content }) {
+type DynamicCardProps = {
+  content: Content;
+};
+
+const DynamicCard: FC<DynamicCardProps> = ({ content }) => {
   return (
     <Card className="w-full p-6">
       <CardHeader>
@@ -215,9 +239,9 @@ function DynamicCard({ content }) {
       </CardContent>
     </Card>
   );
-}
+};
 
-export default function TeamStructure() {
+const TeamStructure: FC = () => {
   return (
     <div>
       <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
@@ -245,4 +269,6 @@ export default function TeamStructure() {
       </Tabs>
     </div>
   );
-}
+};
+
+export default TeamStructure;
