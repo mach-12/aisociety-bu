@@ -21,7 +21,6 @@ export default function Join() {
         <SocietyStructure />
         <TeamStructure />
         <HowToJoin />
-        <JoinUsBadge />
         <FAQs />
         <ContactUs />
       </div>

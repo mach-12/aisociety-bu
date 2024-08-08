@@ -243,10 +243,10 @@ const DynamicCard: FC<DynamicCardProps> = ({ content }) => {
 
 const TeamStructure: FC = () => {
   return (
-    <div className="mx-auto max-w-4xl px-4">
-      <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
+    <div className="mx-auto py-12 md:py-24 lg:py-32 max-w-4xl px-4">
+      <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
         Teams
-      </h2>
+      </h1>
       <Tabs defaultValue="GEN-AI" className="">
         <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
           <TabsTrigger value="GEN-AI">GenAI</TabsTrigger>
