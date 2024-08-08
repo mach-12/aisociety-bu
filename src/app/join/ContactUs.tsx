@@ -4,8 +4,15 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Linkedin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-// Sample contact data
-const contacts = [
+type Contact = {
+  name: string;
+  position: string;
+  image: string;
+  fallback: string;
+  linkedin: string;
+};
+
+const contacts: Contact[] = [
   {
     name: "John Doe",
     position: "CEO",
@@ -32,7 +39,7 @@ const contacts = [
 export default function ContactUs() {
   return (
     <section className="w-full">
-      <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
+      <div className="container mx-auto grid items-center justify-center gap-8 px-4 md:px-6">
         <div className="space-y-4 text-center">
           <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
             Contact Us
@@ -48,7 +55,7 @@ export default function ContactUs() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {contacts.map((contact, index) => (
             <Card key={index}>
-              <CardContent className="flex flex-col items-center gap-4 p-8">
+              <CardContent className="flex flex-col items-center gap-4 p-4 md:p-8">
                 <Avatar>
                   <AvatarImage src={contact.image} alt={contact.name} />
                   <AvatarFallback>{contact.fallback}</AvatarFallback>

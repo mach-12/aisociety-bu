@@ -13,11 +13,11 @@ import Image from "next/image";
 
 export default function SocietyStructure() {
   return (
-    <div className="mx-auto">
-      <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6 ">
+    <div className="mx-auto max-w-2xl px-4">
+      <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
         Society Structure
       </h2>
-      <Tabs defaultValue="new-structure" className="w-[400px]">
+      <Tabs defaultValue="new-structure" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="new-structure">AI Society Structure</TabsTrigger>
           <TabsTrigger value="old-structure">Generic Structure</TabsTrigger>
@@ -30,7 +30,7 @@ export default function SocietyStructure() {
                 width={600}
                 height={600}
                 alt="Logo"
-                className="mx-auto"
+                className="w-full h-auto"
               />
             </CardContent>
           </Card>
@@ -43,7 +43,7 @@ export default function SocietyStructure() {
                 width={600}
                 height={600}
                 alt="Logo"
-                className="mx-auto"
+                className="w-full h-auto"
               />
             </CardContent>
           </Card>
