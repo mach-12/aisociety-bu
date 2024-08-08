@@ -60,7 +60,7 @@ export default function HowToJoin() {
                       {step.applications} applications so far
                     </p>
                   )}
-                  <Avatar size="lg" className="mt-4">
+                  <Avatar className="mt-4 mx-auto">
                     <AvatarImage src={step.avatar} alt={step.title} />
                     <AvatarFallback>{step.fallback}</AvatarFallback>
                   </Avatar>
