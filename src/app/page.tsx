@@ -13,19 +13,15 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-1 p-4">
-        <HeroSection />
-        <AboutUsSection />
+    <main>
+      <HeroSection />
+      <AboutUsSection />
 
-        <NewsSection />
-        <ProjectsSection />
-        <PublicationsSection />
-        <LeadershipSection />
-        <JoinUsSection />
-      </main>
-      <Footer />
-    </div>
+      {/* <NewsSection />
+      <ProjectsSection />
+      <PublicationsSection />
+      <LeadershipSection /> */}
+      <JoinUsSection />
+    </main>
   );
 }

@@ -6,7 +6,7 @@ import contentData from "@/contentData";
 
 export default function HeroSection() {
   return (
-    <section className="bg-muted py-12 md:py-24 lg:py-32">
+    <section className="mt-4 border py-12 md:py-24 lg:py-32">
       <div className="container max-w-5xl mx-auto text-center">
         <Image
           src={contentData.club.logo}
