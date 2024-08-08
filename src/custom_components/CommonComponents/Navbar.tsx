@@ -21,20 +21,21 @@ import {
 const Navbar = () => {
   return (
     <header className="z-10 sticky top-0 bg-primary text-primary-foreground px-4 md:px-6 py-4 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <Image
-          src="/AISociety_Logo_Light.png"
-          width={120}
-          height={120}
-          alt="Logo"
-          className="mx-auto"
-        />
-        <span className="text-xl font-semibold">AI Society</span>
-      </div>
+      <Link href="/">
+        <div className="flex items-center gap-2">
+          <Image
+            src="/AISociety_Logo_Light.png"
+            width={120}
+            height={120}
+            alt="Logo"
+            className="mx-auto"
+          />
+          <span className="text-xl font-semibold">AI Society</span>
+        </div>
+      </Link>
       <NavigationMenu>
         <NavigationMenuList className="hidden md:flex gap-4">
           {[
-            "Home",
             "About",
             "Events",
             "Team",
@@ -45,7 +46,7 @@ const Navbar = () => {
             <NavigationMenuItem key={item}>
               <NavigationMenuLink asChild>
                 <Link
-                  href={`#${item.toLowerCase()}`}
+                  href={`${item.toLowerCase()}`}
                   className="hover:underline underline-offset-4"
                 >
                   {item}
@@ -56,7 +57,7 @@ const Navbar = () => {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link
-                href="#join-us"
+                href="join"
                 className="underline text-secondary hover:underline underline-offset-4 font-bold"
               >
                 Join Us
@@ -85,10 +86,10 @@ const Navbar = () => {
               "Blog",
               "Projects",
               "Publications",
-              "Join Us",
+              "Join",
             ].map((item) => (
               <Link
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                href={`${item.toLowerCase().replace(" ", "-")}`}
                 key={item}
                 className="py-2 hover:underline underline-offset-4"
               >

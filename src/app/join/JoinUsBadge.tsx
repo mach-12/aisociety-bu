@@ -1,0 +1,25 @@
+import Link from "next/link";
+
+export default function JoinUsBadge() {
+  return (
+    <section className="w-full bg-primary py-4 px-6 rounded-lg shadow-md">
+      <div className="container flex items-center justify-between space-x-4">
+        <div className="flex flex-col items-start space-y-2">
+          <h2 className="text-lg font-bold text-primary-foreground">
+            Applications Open
+          </h2>
+          <p className="text-sm text-primary-foreground">
+            Deadline: August 31, 2024
+          </p>
+        </div>
+        <Link
+          href="#"
+          className="inline-flex items-center justify-center rounded-md bg-primary-foreground p-2 w-fit h-12 text-md font-medium text-primary shadow transition-colors hover:bg-primary-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+          prefetch={false}
+        >
+          Apply Now
+        </Link>
+      </div>
+    </section>
+  );
+}

@@ -80,10 +80,7 @@ export default function LeadershipSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <Button
-          variant="link"
-          className="mt-6 mx-auto block text-center"
-        >
+        <Button variant="link" className="mt-6 mx-auto block text-center">
           Meet our leadership team
         </Button>
       </div>
