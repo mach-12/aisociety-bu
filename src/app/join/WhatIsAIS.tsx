@@ -18,7 +18,7 @@ export default function WhatIsAIS() {
         </p>
 
         <Image
-          src="https://picsum.photos/500/300?random=1"
+          src="/ais-group.jpg"
           width={500}
           height={500}
           alt="Logo"

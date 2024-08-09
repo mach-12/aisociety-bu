@@ -10,7 +10,7 @@ const contentData = {
     logos: ["/bennett-logo.webp", "/cabinet-logo.png"],
     about: {
       text: "The AI Specialization Club (AIS) at Bennett University is dedicated to fostering a deep passion for Artificial Intelligence. The club engages in end-to-end project development, achieves victories in hackathons, conducts informative workshops, upskills members through guidance from senior student mentors as well as experienced faculty members. We actively participate in open-source development as well.",
-      image: "https://picsum.photos/500/500?random=4",
+      image: "/ais-hero.jpg",
     },
     news: [
       {
