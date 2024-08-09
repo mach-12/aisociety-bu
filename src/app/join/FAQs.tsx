@@ -34,7 +34,13 @@ const faqData: FAQ[] = [
     id: "item-4",
     question: "How can I prepare for the selection process?",
     answer:
-      "To prepare, review your previous work in the domain, reflect on your leadership experiences, and think about how you can make a meaningful impact in the society. Be ready to share your vision for the future of AIS during the interview process.",
+      "there are going to be three rounds: Math,Coding skills,Aptitude. to have the best chance of clearing the interview remember to revise on AI maths like deriving the log loss etc, the coding assignment will be on kaggle as for the aptitude test your mind will do just fine :3",
+  },
+  {
+    id: "item-5",
+    question: "What can i expect as a member?",
+    answer:
+      "AIS is a project oriented club with an emphasis on research as well, after your selection to one of the teams you will help with events and actively make projects that may be published on our site or showcased in these events.",
   },
 ];
 
