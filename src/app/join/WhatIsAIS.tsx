@@ -8,18 +8,13 @@ export default function WhatIsAIS() {
       </h2>
       <div className="flex flex-col md:flex-row justify-start text-left gap-8 md:gap-32">
         <p className="w-full md:w-1/2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus soluta
-          debitis id aspernatur ipsa quidem sed nesciunt optio assumenda
-          suscipit fuga quasi repellendus, vero recusandae cupiditate voluptates
-          atque ipsum quibusdam reiciendis in perferendis ad. Officiis adipisci
-          voluptas aperiam ipsa, earum veritatis nisi repellendus odio minus
-          hic! Repellendus dolorem suscipit neque.
-          <br></br>
-          <br></br>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          corporis esse ducimus, officiis inventore distinctio repellendus ipsa
-          aperiam nam nobis facilis? Perferendis impedit laboriosam perspiciatis
-          laborum possimus, atque commodi dolorem.
+          The <span className="font-bold">Artificial Intelligence Society (AIS) </span> at Bennett University is one
+          of the most research-focused and collaborative student communities on
+          campus. Our mission is to foster a deep understanding of AI and its
+          applications by bringing together like-minded individuals who are
+          eager to learn, share knowledge, and work on innovative projects. We
+          believe in building together, mentoring juniors, and creating an
+          inclusive environment where everyone can grow.
         </p>
 
         <Image

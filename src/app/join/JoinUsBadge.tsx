@@ -1,3 +1,4 @@
+import contentData from "@/contentData";
 import Link from "next/link";
 
 export default function JoinUsBadge() {
@@ -6,14 +7,15 @@ export default function JoinUsBadge() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex flex-col items-start space-y-2">
           <h2 className="text-lg font-bold text-primary-foreground">
-            Applications Open
+            Applications Open (Senior Core)
           </h2>
           <p className="text-sm text-primary-foreground">
             Deadline: August 31, 2024
           </p>
         </div>
         <Link
-          href="#"
+          href={contentData.form_link}
+          target="_blank"
           className="inline-flex items-center justify-center rounded-md bg-primary-foreground p-2 w-full md:w-fit h-12 text-md font-medium text-primary shadow transition-colors hover:bg-primary-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
