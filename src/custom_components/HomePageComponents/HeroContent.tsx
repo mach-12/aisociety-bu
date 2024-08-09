@@ -8,7 +8,7 @@ export default function HeroContent() {
   return (
     <section className="z-20 px-4 py-10 flex flex-col items-center justify-center">
       <div className="container max-w-5xl mx-auto text-center">
-        <Link href={contentData.form_link} className="hover">
+        <Link href={contentData.form_link}>
           <BadgeButton text="Applications are Open! Join Now" />
         </Link>
 

@@ -68,10 +68,7 @@ export default function HowToJoin() {
                   <h4 className="text-lg font-semibold">{step.title}</h4>
                   <p className="text-muted-foreground">{step.description}</p>
 
-                  <Avatar className="mt-4 mx-auto">
-                    <AvatarImage src={step.avatar} alt={step.title} />
-                    <AvatarFallback>{step.fallback}</AvatarFallback>
-                  </Avatar>
+              
                   {step.formLink && (
                     <Link
                       href={contentData.form_link}
