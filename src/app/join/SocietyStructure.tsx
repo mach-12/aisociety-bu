@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Compare } from "@/components/ui/compare";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
@@ -50,5 +51,16 @@ export default function SocietyStructure() {
         </TabsContent>
       </Tabs>
     </div>
+    // <div className="flex ">
+    //   <Compare
+    //     firstImage="/new-ais.png"
+    //     secondImage="/legacy-ais.png"
+    //     firstImageClassName="object-cover object-left-top"
+    //     secondImageClassname="object-cover object-left-top"
+    //     className="max-h-fit w-[1000px] "
+    //     slideMode="drag"
+    //     initialSliderPercentage={98}
+    //   />
+    // </div>
   );
 }
