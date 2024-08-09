@@ -248,7 +248,7 @@ const TeamStructure: FC = () => {
         Teams
       </h2>
       <Tabs defaultValue="GEN-AI" className="">
-        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 my-8 sm:my-1">
           <TabsTrigger value="GEN-AI">GenAI</TabsTrigger>
           <TabsTrigger value="CV">CV</TabsTrigger>
           <TabsTrigger value="RL">RL</TabsTrigger>
