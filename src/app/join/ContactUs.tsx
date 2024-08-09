@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Linkedin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import contentData from "@/contentData";
 
 type Contact = {
   name: string;
@@ -45,7 +46,8 @@ export default function ContactUs() {
             Contact Us
           </h2>
           <Link
-            href="#"
+            href={contentData.whatsapp_link}
+            target="_blank"
             className="inline-flex items-center justify-center rounded-md bg-green-500 px-8 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 mt-4"
             prefetch={false}
           >

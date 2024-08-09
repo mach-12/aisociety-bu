@@ -24,7 +24,7 @@ export default function HeroSection() {
       >
         <Icons.hf />
       </OrbitingCircles>
-      Outer Circles 1 (reverse)
+
       <OrbitingCircles
         className="size-[50px] border-none bg-transparent"
         radius={380}

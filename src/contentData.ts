@@ -1,11 +1,12 @@
 // Save this in a file such as contentData.js
 const contentData = {
+  whatsapp_link: "https://chat.whatsapp.com/JNWPTs2NwBf1sTaHMF4t3Y",
   form_link:
     "https://docs.google.com/forms/d/e/1FAIpQLSdUtPtlp6P3f2XNd5KhEuFnSpxT-ZVyrwG-YopDZfZLnEX9bQ/viewform",
   club: {
     logo: "/AISociety_Logo_Dark.png",
     name: "Artificial Intelligence Society (AIS)",
-    supportedBy: "Specialization Club at Bennett University",
+    supportedBy: "Training Minds one Epoch at a Time",
     logos: ["/bennett-logo.webp", "/cabinet-logo.png"],
     about: {
       text: "The AI Specialization Club (AIS) at Bennett University is dedicated to fostering a deep passion for Artificial Intelligence. The club engages in end-to-end project development, achieves victories in hackathons, conducts informative workshops, upskills members through guidance from senior student mentors as well as experienced faculty members. We actively participate in open-source development as well.",
