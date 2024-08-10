@@ -12,7 +12,7 @@ export default function WhatIsAIS() {
   return (
     <div className="mx-auto max-w-6xl p-6 border rounded-xl mt-6">
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center md:text-left mb-6">
-        What is AI Society?
+        What is AI Society ?
       </h2>
       <div className="flex flex-col md:flex-row justify-start text-left gap-8 md:gap-32">
         <p className="text-muted-foreground md:text-xl xl:text-2xl w-full md:w-1/2 text-center md:text-left">

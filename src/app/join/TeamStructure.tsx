@@ -39,6 +39,11 @@ type Content = {
   responsibilities: string[];
 };
 
+type BentoGridProps = {
+  content: Content;
+  gradient: string;
+};
+
 // Data
 const teamsData: Record<string, Content> = {
   GenAI: {
@@ -207,10 +212,12 @@ const TrendItem: FC<{ trend: Trend }> = ({ trend }) => (
   </div>
 );
 
-const BentoGrid: FC<{ content: Content }> = ({ content }) => (
+const BentoGrid: FC<BentoGridProps> = ({ content, gradient }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
     {/* Team Overview */}
-    <Card className="col-span-1 md:col-span-2 lg:col-span-4 overflow-hidden bg-gradient-to-r from-primary to-primary-foreground">
+    <Card
+      className={`col-span-1 md:col-span-2 lg:col-span-4 overflow-hidden ${gradient}`}
+    >
       <CardHeader className="text-white flex flex-col items-center text-center p-6">
         <Users className="w-16 h-16 mb-3" />
         <CardTitle className="text-2xl mb-2">{content.title}</CardTitle>
@@ -294,6 +301,13 @@ const BentoGrid: FC<{ content: Content }> = ({ content }) => (
 );
 
 const TeamStructure: FC = () => {
+  const gradients = {
+    GenAI: "bg-gradient-to-r from-[#ffe259] to-[#ffa751]",
+    RL: "bg-gradient-to-r from-[#EB3349] to-[#F45C43]",
+    CV: "bg-gradient-to-r from-[#5433FF] via-[#20BDFF] to-[#A5FECB]",
+    NLP: "bg-gradient-to-r from-[#3CA55C] to-[#B5AC49]",
+  };
+
   return (
     <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center mb-8">
@@ -313,7 +327,10 @@ const TeamStructure: FC = () => {
         </TabsList>
         {Object.entries(teamsData).map(([key, content]) => (
           <TabsContent key={key} value={key} className="mx-auto max-w-7xl">
-            <BentoGrid content={content} />
+            <BentoGrid
+              content={content}
+              gradient={gradients[key as keyof typeof gradients]}
+            />
           </TabsContent>
         ))}
       </Tabs>

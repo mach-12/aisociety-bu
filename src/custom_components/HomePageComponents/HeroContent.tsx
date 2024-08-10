@@ -34,16 +34,6 @@ export default function HeroContent() {
             />
           ))}
         </div>
-        <div className="space-y-4 text-center">
-          <Link
-            href={contentData.whatsapp_link}
-            target="_blank"
-            className="inline-flex items-center justify-center rounded-md bg-green-500 px-8 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 mt-4"
-            prefetch={false}
-          >
-            <FaWhatsapp className="mr-2 h-5 w-5" /> Join our WhatsApp community
-          </Link>
-        </div>
       </div>
     </section>
   );
