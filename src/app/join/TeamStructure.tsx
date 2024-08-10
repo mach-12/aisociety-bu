@@ -257,9 +257,9 @@ const TeamStructure: FC = () => {
   return (
     <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-center mb-12">
-        AI Research Teams
+        Teams
       </h1>
-      <Tabs defaultValue="GEN_AI" className="space-y-8">
+      <Tabs defaultValue="GEN-AI" className="space-y-8">
         <TabsList className="flex flex-wrap justify-center gap-2">
           {Object.entries(teamsData).map(([key]) => (
             <TabsTrigger
