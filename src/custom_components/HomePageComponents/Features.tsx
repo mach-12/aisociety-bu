@@ -56,7 +56,7 @@ export function Features() {
   return (
     
     <div
-      className="relative flex h-[500px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-4 md:p-10 md:shadow-xl"
+      className="mx-auto max-w-4xl relative flex  w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-4 md:p-10 md:shadow-xl "
       ref={containerRef}
     >
 
