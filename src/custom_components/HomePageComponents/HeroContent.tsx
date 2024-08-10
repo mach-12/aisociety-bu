@@ -9,7 +9,6 @@ export default function HeroContent() {
   return (
     <section className="z-20 px-4 py-10 flex flex-col items-center justify-center">
       <div className="container max-w-5xl mx-auto text-center">
-
         <Image
           src={contentData.club.logo}
           alt="Logo"

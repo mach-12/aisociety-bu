@@ -8,7 +8,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart2, Briefcase, CheckCircle, List, TrendingDown, TrendingUp, Users } from "lucide-react";
+import {
+  BarChart2,
+  Briefcase,
+  CheckCircle,
+  List,
+  TrendingDown,
+  TrendingUp,
+  Users,
+} from "lucide-react";
 
 // Types
 type Project = {
@@ -206,7 +214,9 @@ const BentoGrid: FC<{ content: Content }> = ({ content }) => (
       <CardHeader className="text-white flex flex-col items-center text-center p-6">
         <Users className="w-16 h-16 mb-3" />
         <CardTitle className="text-2xl mb-2">{content.title}</CardTitle>
-        <CardDescription className="text-white/80">{content.description}</CardDescription>
+        <CardDescription className="text-white/80">
+          {content.description}
+        </CardDescription>
       </CardHeader>
     </Card>
 

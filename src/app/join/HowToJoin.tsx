@@ -29,7 +29,8 @@ const steps: Step[] = [
   {
     step: "Step 2",
     title: "Form Shortlisting",
-    description: "Form review period where you will be judged by the form responses.",
+    description:
+      "Form review period where you will be judged by the form responses.",
     icon: "🔍",
     dates: "11th-12th August",
     status: "Upcoming",
@@ -37,7 +38,8 @@ const steps: Step[] = [
   {
     step: "Step 3",
     title: "One-on-One Interview",
-    description: "Candidate is interviewed on technical and collaborative skills.",
+    description:
+      "Candidate is interviewed on technical and collaborative skills.",
     icon: "🗣️",
     dates: "12-13th August",
     status: "Upcoming",
@@ -51,11 +53,18 @@ export default function HowToJoin() {
         <h2 className="text-4xl font-bold text-center mb-12">How to Join</h2>
         <div className="grid gap-8 md:grid-cols-3">
           {steps.map((step, index) => (
-            <Card key={index} className="overflow-hidden transition-all duration-300 border-2 hover:shadow-lg">
+            <Card
+              key={index}
+              className="overflow-hidden transition-all duration-300 border-2 hover:shadow-lg"
+            >
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl">{step.icon}</span>
-                  <Badge variant={step.status === "Ongoing" ? "default" : "secondary"}>
+                  <Badge
+                    variant={
+                      step.status === "Ongoing" ? "default" : "secondary"
+                    }
+                  >
                     {step.status}
                   </Badge>
                 </div>
