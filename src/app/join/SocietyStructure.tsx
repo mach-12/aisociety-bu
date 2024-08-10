@@ -14,14 +14,24 @@ import Image from "next/image";
 
 export default function SocietyStructure() {
   return (
-    <div className="mx-auto max-w-2xl px-4">
-      <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
+    <div className="px-4 py-12 md:py-24 lg:py-32 mx-auto max-w-2xl">
+      <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
         Society Structure
-      </h2>
+      </h1>
       <Tabs defaultValue="new-structure" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="new-structure">AI Society Structure</TabsTrigger>
-          <TabsTrigger value="old-structure">Generic Structure</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-2 border">
+          <TabsTrigger
+            value="new-structure"
+            className="data-[state=active]:bg-primary data-[state=active]:text-white"
+          >
+            AI Society Structure
+          </TabsTrigger>
+          <TabsTrigger
+            value="old-structure"
+            className="data-[state=active]:bg-primary data-[state=active]:text-white"
+          >
+            Generic Structure
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="new-structure">
           <Card>
@@ -51,16 +61,5 @@ export default function SocietyStructure() {
         </TabsContent>
       </Tabs>
     </div>
-    // <div className="flex ">
-    //   <Compare
-    //     firstImage="/new-ais.png"
-    //     secondImage="/legacy-ais.png"
-    //     firstImageClassName="object-cover object-left-top"
-    //     secondImageClassname="object-cover object-left-top"
-    //     className="max-h-fit w-[1000px] "
-    //     slideMode="drag"
-    //     initialSliderPercentage={98}
-    //   />
-    // </div>
   );
 }

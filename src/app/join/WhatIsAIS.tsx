@@ -1,6 +1,15 @@
+import React from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import contentData from "@/contentData";
+import PolaroidStack from "@/custom_components/PolaroidStack";
 
 export default function WhatIsAIS() {
+    const randomImages = [
+    { src: "https://picsum.photos/800/600?random=1", alt: "Random Image 1" },
+    { src: "https://picsum.photos/800/600?random=2", alt: "Random Image 2" },
+    { src: "https://picsum.photos/800/600?random=3", alt: "Random Image 3" },
+  ];
   return (
     <div>
       <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
@@ -28,7 +37,10 @@ export default function WhatIsAIS() {
           alt="Logo"
           className="mx-auto md:w-1/2 lg:w-1/3 xl:w-1/3"
         />
+        {/* <div className="flex items-center justify-center">
+          <PolaroidStack images={randomImages} />
+        </div> */ }
       </div>
-    </div>
+    </section>
   );
 }

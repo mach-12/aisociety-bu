@@ -1,5 +1,6 @@
 import contentData from "@/contentData";
 import Link from "next/link";
+import { Calendar, ArrowRight } from "lucide-react";
 
 export default function JoinUsBadge() {
   return (

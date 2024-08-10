@@ -39,10 +39,11 @@ const contacts: Contact[] = [
 
 export default function ContactUs() {
   return (
-    <section className="w-full py-8">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-8">
-          <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container mx-auto grid items-center justify-center gap-8 md:px-6">
+        <div className="space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
+
             Contact Us
           </h2>
           <Link
@@ -69,6 +70,7 @@ export default function ContactUs() {
                     href={contact.linkedin}
                     target="_blank"
                     className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+
                     prefetch={false}
                   >
                     <Linkedin className="mr-2 h-4 w-4" /> Connect
