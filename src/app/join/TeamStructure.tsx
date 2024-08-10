@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart2, Briefcase, CheckCircle, List, TrendingDown, TrendingUp } from "lucide-react";
+import { BarChart2, Briefcase, CheckCircle, List, TrendingDown, TrendingUp, Users } from "lucide-react";
 
 // Types
 type Project = {
@@ -174,16 +174,18 @@ const teamsData: Record<string, Content> = {
 
 // Components
 const ProjectCard: FC<{ project: Project }> = ({ project }) => (
-  <div className="bg-secondary/10 p-4 rounded-lg flex items-start space-x-3">
-    <Briefcase className="w-5 h-5 mt-1 flex-shrink-0" />
-    <div>
-      <div className="flex items-center gap-2 mb-1">
+  <Card className="flex flex-col h-full">
+    <CardHeader className="flex-shrink-0">
+      <div className="flex items-center justify-between mb-2">
         <Badge variant="secondary">{project.status}</Badge>
-        <h4 className="font-semibold">{project.title}</h4>
+        <Briefcase className="w-5 h-5" />
       </div>
+      <CardTitle className="text-lg">{project.title}</CardTitle>
+    </CardHeader>
+    <CardContent className="flex-grow">
       <p className="text-sm text-muted-foreground">{project.description}</p>
-    </div>
-  </div>
+    </CardContent>
+  </Card>
 );
 
 const TrendItem: FC<{ trend: Trend }> = ({ trend }) => (
@@ -197,39 +199,26 @@ const TrendItem: FC<{ trend: Trend }> = ({ trend }) => (
   </div>
 );
 
-const ContentSection: FC<{ title: string; icon: React.ReactNode; children: React.ReactNode }> = ({
-  title,
-  icon,
-  children,
-}) => (
-  <Card className="h-full">
-    <CardHeader className="flex flex-row items-center space-x-2">
-      {icon}
-      <CardTitle className="text-xl">{title}</CardTitle>
-    </CardHeader>
-    <CardContent>{children}</CardContent>
-  </Card>
-);
-
-const TeamContent: FC<{ content: Content }> = ({ content }) => (
-  <div className="space-y-6">
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-2xl">{content.title}</CardTitle>
-        <CardDescription>{content.description}</CardDescription>
+const BentoGrid: FC<{ content: Content }> = ({ content }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    {/* Team Overview */}
+    <Card className="col-span-1 md:col-span-2 lg:col-span-4 overflow-hidden bg-gradient-to-r from-primary to-primary-foreground">
+      <CardHeader className="text-white flex flex-col items-center text-center p-6">
+        <Users className="w-16 h-16 mb-3" />
+        <CardTitle className="text-2xl mb-2">{content.title}</CardTitle>
+        <CardDescription className="text-white/80">{content.description}</CardDescription>
       </CardHeader>
     </Card>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <ContentSection title="Potential Projects" icon={<Briefcase className="w-5 h-5" />}>
-        <div className="space-y-4">
-          {content.potentialProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
-      </ContentSection>
-
-      <ContentSection title="Work Done" icon={<CheckCircle className="w-5 h-5" />}>
+    {/* Work Done */}
+    <Card className="col-span-1 md:col-span-2 lg:col-span-2 overflow-y-auto flex flex-col">
+      <CardHeader className="flex-shrink-0">
+        <CardTitle className="flex items-center gap-2">
+          <CheckCircle className="w-5 h-5" />
+          Work Done
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="flex-1">
         <div className="flex flex-wrap gap-2">
           {content.workDone.map((work, index) => (
             <Badge key={index} variant="outline">
@@ -237,17 +226,50 @@ const TeamContent: FC<{ content: Content }> = ({ content }) => (
             </Badge>
           ))}
         </div>
-      </ContentSection>
+      </CardContent>
+    </Card>
 
-      <ContentSection title="Latest Trends" icon={<BarChart2 className="w-5 h-5" />}>
-        <div className="space-y-2">
-          {content.latestTrends.map((trend, index) => (
-            <TrendItem key={index} trend={trend} />
+    {/* Potential Projects */}
+    <Card className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden flex flex-col">
+      <CardHeader className="flex-shrink-0">
+        <CardTitle className="flex items-center gap-2">
+          <Briefcase className="w-5 h-5" />
+          Potential Projects
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="flex-grow overflow-y-auto">
+        <div className="grid grid-cols-1 gap-4">
+          {content.potentialProjects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
-      </ContentSection>
+      </CardContent>
+    </Card>
 
-      <ContentSection title="Responsibilities" icon={<List className="w-5 h-5" />}>
+    {/* Latest Trends */}
+    <Card className="col-span-1 md:col-span-1 lg:col-span-1 overflow-y-auto flex flex-col">
+      <CardHeader className="flex-shrink-0">
+        <CardTitle className="flex items-center gap-2">
+          <BarChart2 className="w-5 h-5" />
+          Latest Trends
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="flex-1 space-y-2">
+        {content.latestTrends.map((trend, index) => (
+          <TrendItem key={index} trend={trend} />
+        ))}
+      </CardContent>
+    </Card>
+
+    {/* Responsibilities */}
+    <Card className="col-span-1 md:col-span-1 lg:col-span-1 overflow-y-auto flex flex-col">
+      <CardHeader className="flex-shrink-0">
+        <CardTitle className="flex items-center gap-2">
+          <List className="w-5 h-5" />
+          Responsibilities
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="flex-1">
         <ul className="space-y-2 text-sm text-muted-foreground">
           {content.responsibilities.map((responsibility, index) => (
             <li key={index} className="flex items-start space-x-2">
@@ -256,15 +278,15 @@ const TeamContent: FC<{ content: Content }> = ({ content }) => (
             </li>
           ))}
         </ul>
-      </ContentSection>
-    </div>
+      </CardContent>
+    </Card>
   </div>
 );
 
 const TeamStructure: FC = () => {
   return (
-    <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-center mb-12">
+    <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center mb-8">
         Our Teams
       </h1>
       <Tabs defaultValue="GenAI" className="space-y-8">
@@ -273,15 +295,15 @@ const TeamStructure: FC = () => {
             <TabsTrigger
               key={key}
               value={key}
-              className="px-4 py-2 rounded-full transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              className="px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
               {key}
             </TabsTrigger>
           ))}
         </TabsList>
         {Object.entries(teamsData).map(([key, content]) => (
-          <TabsContent key={key} value={key} className="mx-auto max-w-5xl">
-            <TeamContent content={content} />
+          <TabsContent key={key} value={key} className="mx-auto max-w-7xl">
+            <BentoGrid content={content} />
           </TabsContent>
         ))}
       </Tabs>
