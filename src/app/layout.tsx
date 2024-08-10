@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         className={cn(
           "antialiased p-4 md:p-6",
           fontHeading.variable,
-          fontBody.variable,
+          fontBody.variable
         )}
       >
         <Navbar />
