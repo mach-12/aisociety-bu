@@ -37,7 +37,7 @@ const Navbar = () => {
       <NavigationMenu>
         <NavigationMenuList className="hidden lg:flex gap-4">
           {/* {["About", "Events", "Team", "Blog", "Projects", "Publications"].map( */}
-          {[].map(
+          {[""].map(
 
             (item) => (
               <NavigationMenuItem key={item}>
