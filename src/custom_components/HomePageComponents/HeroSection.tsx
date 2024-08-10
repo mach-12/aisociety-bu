@@ -1,9 +1,15 @@
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import HeroContent from "./HeroContent";
+import Link from "next/link";
+import contentData from "@/contentData";
+import BadgeButton from "../BadgeButton";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex w-full flex-col items-center justify-center">
+      <Link href={contentData.form_link} className="mt-20">
+        <BadgeButton text="Applications are Open! Join Now" />
+      </Link>
       <span className="z-10 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         <HeroContent />
       </span>

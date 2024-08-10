@@ -43,7 +43,6 @@ export default function ContactUs() {
       <div className="container mx-auto grid items-center justify-center gap-8 md:px-6">
         <div className="space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
-
             Contact Us
           </h2>
           <Link
@@ -70,7 +69,6 @@ export default function ContactUs() {
                     href={contact.linkedin}
                     target="_blank"
                     className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
-
                     prefetch={false}
                   >
                     <Linkedin className="mr-2 h-4 w-4" /> Connect
