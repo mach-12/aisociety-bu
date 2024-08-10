@@ -1,14 +1,13 @@
 import React from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import contentData from "@/contentData";
 import PolaroidStack from "../PolaroidStack";
 
 export default function AboutUsSection() {
   const randomImages = [
-    { src: "https://picsum.photos/800/600?random=1", alt: "Random Image 1" },
-    { src: "https://picsum.photos/800/600?random=2", alt: "Random Image 2" },
-    { src: "https://picsum.photos/800/600?random=3", alt: "Random Image 3" },
+    { src: "/ais-hero.jpg", alt: "AIS" },
+    { src: "/ais-hero.jpg", alt: "AIS" },
+    { src: "/ais-hero.jpg", alt: "AIS" },
   ];
 
   return (
