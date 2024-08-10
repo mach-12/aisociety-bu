@@ -19,9 +19,19 @@ export default function SocietyStructure() {
         Society Structure
       </h1>
       <Tabs defaultValue="new-structure" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="new-structure">AI Society Structure</TabsTrigger>
-          <TabsTrigger value="old-structure">Generic Structure</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-2 border">
+          <TabsTrigger
+            value="new-structure"
+            className="data-[state=active]:bg-primary data-[state=active]:text-white"
+          >
+            AI Society Structure
+          </TabsTrigger>
+          <TabsTrigger
+            value="old-structure"
+            className="data-[state=active]:bg-primary data-[state=active]:text-white"
+          >
+            Generic Structure
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="new-structure">
           <Card>
@@ -51,16 +61,5 @@ export default function SocietyStructure() {
         </TabsContent>
       </Tabs>
     </div>
-    // <div className="flex ">
-    //   <Compare
-    //     firstImage="/new-ais.png"
-    //     secondImage="/legacy-ais.png"
-    //     firstImageClassName="object-cover object-left-top"
-    //     secondImageClassname="object-cover object-left-top"
-    //     className="max-h-fit w-[1000px] "
-    //     slideMode="drag"
-    //     initialSliderPercentage={98}
-    //   />
-    // </div>
   );
 }

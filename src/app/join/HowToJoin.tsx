@@ -54,7 +54,7 @@ const steps: Step[] = [
 export default function HowToJoin() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container mx-auto grid items-center justify-center gap-8 px-4 md:px-6">
+      <div className="container mx-auto grid items-center justify-center gap-8">
         <div className="space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
             How to Join
@@ -94,7 +94,6 @@ export default function HowToJoin() {
           ))}
         </div>
         <JoinUsBadge />
-
       </div>
     </section>
   );

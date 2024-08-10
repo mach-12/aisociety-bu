@@ -1,17 +1,16 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TrendingDown, TrendingUp } from "lucide-react";
 
+// Types
 type Project = {
   status: string;
   title: string;
@@ -32,12 +31,12 @@ type Content = {
   responsibilities: string[];
 };
 
-// Placeholder content for dynamic loading
-const placeholderContent: Record<string, Content> = {
+// Data
+const teamsData: Record<string, Content> = {
   GEN_AI: {
     title: "Generative AI",
     description:
-      "Generative AI focuses on creating new content, such as text, images, and music, using machine learning models.",
+      "Generative AI focuses on creating new content using machine learning models.",
     potentialProjects: [
       {
         status: "New",
@@ -51,65 +50,61 @@ const placeholderContent: Record<string, Content> = {
       },
     ],
     workDone: [
-      "Generated over 100,000 images",
+      "Generated 100,000+ images",
       "Trained on diverse datasets",
-      "Published 5 research papers",
-      "Collaborated with industry leaders",
+      "Published 5 papers",
+      "Industry collaborations",
     ],
     latestTrends: [
-      { trend: "AI-generated art is becoming popular", direction: "up" },
-      { trend: "Manual content creation is declining", direction: "down" },
-      { trend: "AI in creative industries is on the rise", direction: "up" },
+      { trend: "AI-generated art popularity", direction: "up" },
+      { trend: "Manual content creation", direction: "down" },
+      { trend: "AI in creative industries", direction: "up" },
     ],
     responsibilities: [
-      "Develop generative models",
+      "Develop models",
       "Train on large datasets",
-      "Optimize for quality and performance",
-      "Collaborate with creative teams",
+      "Optimize performance",
+      "Creative team collaboration",
     ],
   },
   CV: {
     title: "Computer Vision",
     description:
-      "Computer vision is like giving eyes to computers, enabling them to see, understand, and interact with the world through images and videos.",
+      "Computer vision enables computers to interpret and understand visual information.",
     potentialProjects: [
       {
         status: "New",
-        title: "Image Classification System",
-        description:
-          "Develop an image classification system to automate the categorization of images.",
+        title: "Image Classification",
+        description: "Develop system to categorize images automatically.",
       },
       {
         status: "Ongoing",
-        title: "Object Detection in Videos",
-        description:
-          "Build an object detection system to identify and track objects in video footage.",
+        title: "Object Detection",
+        description: "Build system to identify objects in video footage.",
       },
     ],
     workDone: [
       "Trained 5 neural networks",
-      "Improved model accuracy by 20%",
-      "Deployed a real-time detection system",
-      "Published 12 research papers",
-      "Collaborated with 3 industry partners",
+      "20% accuracy improvement",
+      "Real-time detection system",
+      "12 research papers",
     ],
     latestTrends: [
-      { trend: "Real-time processing is gaining popularity", direction: "up" },
-      { trend: "Traditional image processing is declining", direction: "down" },
-      { trend: "AI-powered analytics is on the rise", direction: "up" },
+      { trend: "Real-time processing", direction: "up" },
+      { trend: "Traditional image processing", direction: "down" },
+      { trend: "AI-powered analytics", direction: "up" },
     ],
     responsibilities: [
-      "Develop and execute computer vision strategies",
-      "Manage data collection and annotation",
-      "Optimize algorithms for real-time performance",
-      "Collaborate with research team on publications",
-      "Identify and integrate with relevant datasets",
+      "Develop CV strategies",
+      "Manage data collection",
+      "Optimize algorithms",
+      "Research collaboration",
     ],
   },
   RL: {
     title: "Reinforcement Learning",
     description:
-      "Reinforcement Learning involves training models to make sequences of decisions by rewarding desired behaviors.",
+      "Reinforcement Learning involves training models to make sequences of decisions.",
     potentialProjects: [
       {
         status: "New",
@@ -119,153 +114,168 @@ const placeholderContent: Record<string, Content> = {
       {
         status: "Ongoing",
         title: "Game Playing AI",
-        description: "Create AI that can play and learn from games.",
+        description: "Create AI that can play and learn from complex games.",
       },
     ],
     workDone: [
       "Developed 3 game-playing agents",
-      "Increased reward efficiency by 15%",
-      "Published 7 research papers",
-      "Partnered with gaming companies",
+      "15% reward efficiency increase",
+      "7 research papers",
+      "Gaming industry partnerships",
     ],
     latestTrends: [
-      { trend: "Use in robotics is increasing", direction: "up" },
-      { trend: "Manual tuning of models is declining", direction: "down" },
-      { trend: "AI for optimization problems is on the rise", direction: "up" },
+      { trend: "Use in robotics", direction: "up" },
+      { trend: "Manual model tuning", direction: "down" },
+      { trend: "AI for optimization problems", direction: "up" },
     ],
     responsibilities: [
-      "Design reinforcement learning algorithms",
+      "Design RL algorithms",
       "Experiment with reward structures",
       "Optimize for long-term success",
-      "Collaborate with application teams",
+      "Application team collaboration",
     ],
   },
   NLP: {
     title: "Natural Language Processing",
     description:
-      "Natural Language Processing (NLP) enables computers to understand, interpret, and generate human language.",
+      "NLP enables computers to understand, interpret, and generate human language.",
     potentialProjects: [
       {
         status: "New",
-        title: "Chatbot Development",
+        title: "Advanced Chatbot",
         description:
-          "Build a chatbot that can engage in meaningful conversations.",
+          "Build a chatbot capable of nuanced, context-aware conversations.",
       },
       {
         status: "Ongoing",
         title: "Sentiment Analysis",
-        description: "Develop a system to analyze the sentiment of text.",
+        description: "Develop a system to analyze complex emotions in text.",
       },
     ],
     workDone: [
-      "Created 4 chatbots",
-      "Enhanced text processing speed",
-      "Published 10 research papers",
-      "Collaborated with social media companies",
+      "Created 4 state-of-the-art chatbots",
+      "Improved text processing speed by 30%",
+      "10 research papers",
+      "Collaborations with tech giants",
     ],
     latestTrends: [
-      { trend: "Transformer models are on the rise", direction: "up" },
-      { trend: "Rule-based NLP is declining", direction: "down" },
-      { trend: "AI for customer service is increasing", direction: "up" },
+      { trend: "Transformer model applications", direction: "up" },
+      { trend: "Rule-based NLP systems", direction: "down" },
+      { trend: "Multilingual AI models", direction: "up" },
     ],
     responsibilities: [
-      "Develop NLP algorithms",
-      "Analyze text data",
+      "Develop cutting-edge NLP algorithms",
+      "Analyze vast text datasets",
       "Optimize language models",
-      "Collaborate with linguists",
+      "Cross-disciplinary linguistics collaboration",
     ],
   },
 };
 
-type DynamicCardProps = {
-  content: Content;
-};
+// Components
+const ProjectCard: FC<{ project: Project }> = ({ project }) => (
+  <div className="bg-secondary/10 p-4 rounded-lg">
+    <div className="flex items-center gap-2 mb-2">
+      <Badge variant="secondary">{project.status}</Badge>
+      <h4 className="font-semibold">{project.title}</h4>
+    </div>
+    <p className="text-sm text-muted-foreground">{project.description}</p>
+  </div>
+);
 
-const DynamicCard: FC<DynamicCardProps> = ({ content }) => {
-  return (
-    <Card className="w-full p-6">
+const TrendItem: FC<{ trend: Trend }> = ({ trend }) => (
+  <div className="flex items-center gap-2 bg-secondary/10 p-2 rounded">
+    {trend.direction === "up" ? (
+      <TrendingUp className="w-5 h-5 text-green-500" />
+    ) : (
+      <TrendingDown className="w-5 h-5 text-red-500" />
+    )}
+    <span className="text-sm">{trend.trend}</span>
+  </div>
+);
+
+const ContentSection: FC<{ title: string; children: React.ReactNode }> = ({
+  title,
+  children,
+}) => (
+  <Card className="h-full">
+    <CardHeader>
+      <CardTitle className="text-xl">{title}</CardTitle>
+    </CardHeader>
+    <CardContent>{children}</CardContent>
+  </Card>
+);
+
+const TeamContent: FC<{ content: Content }> = ({ content }) => (
+  <div className="space-y-6">
+    <Card>
       <CardHeader>
-        <CardTitle>{content.title}</CardTitle>
+        <CardTitle className="text-2xl">{content.title}</CardTitle>
         <CardDescription>{content.description}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-6">
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <h3 className="text-lg font-medium">Potential Projects</h3>
-            <div className="grid gap-4 mt-4">
-              {content.potentialProjects.map((project, index) => (
-                <div key={index} className="grid gap-2">
-                  <div className="flex items-center gap-2">
-                    <Badge variant="secondary">{project.status}</Badge>
-                    <h4 className="text-lg font-medium">{project.title}</h4>
-                  </div>
-                  <p className="text-muted-foreground">{project.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="text-lg font-medium">Work Done</h3>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {content.workDone.map((work, index) => (
-                <Badge key={index}>{work}</Badge>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <h3 className="text-lg font-medium">Latest Trends</h3>
-            {content.latestTrends.map((trend, index) => (
-              <div key={index} className="flex items-center gap-2 mt-2">
-                {trend.direction === "up" ? (
-                  <TrendingUp className="w-5 h-5 text-green-500" />
-                ) : (
-                  <TrendingDown className="w-5 h-5 text-red-500" />
-                )}
-                <span>{trend.trend}</span>
-              </div>
-            ))}
-          </div>
-          <div>
-            <h3 className="text-lg font-medium">Responsibilities</h3>
-            <ul className="list-disc pl-6 mt-2 text-muted-foreground">
-              {content.responsibilities.map((responsibility, index) => (
-                <li key={index}>{responsibility}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </CardContent>
     </Card>
-  );
-};
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <ContentSection title="Potential Projects">
+        <div className="space-y-4">
+          {content.potentialProjects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+      </ContentSection>
+
+      <ContentSection title="Work Done">
+        <div className="flex flex-wrap gap-2">
+          {content.workDone.map((work, index) => (
+            <Badge key={index} variant="outline">
+              {work}
+            </Badge>
+          ))}
+        </div>
+      </ContentSection>
+
+      <ContentSection title="Latest Trends">
+        <div className="space-y-2">
+          {content.latestTrends.map((trend, index) => (
+            <TrendItem key={index} trend={trend} />
+          ))}
+        </div>
+      </ContentSection>
+
+      <ContentSection title="Responsibilities">
+        <ul className="list-disc pl-6 space-y-1 text-sm text-muted-foreground">
+          {content.responsibilities.map((responsibility, index) => (
+            <li key={index}>{responsibility}</li>
+          ))}
+        </ul>
+      </ContentSection>
+    </div>
+  </div>
+);
 
 const TeamStructure: FC = () => {
   return (
-    <div className="mx-auto py-12 md:py-24 lg:py-32 max-w-4xl px-4">
-      <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
-        Teams
+    <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-center mb-12">
+        AI Research Teams
       </h1>
-      <Tabs defaultValue="GEN-AI" className="">
-        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
-          <TabsTrigger value="GEN-AI">GenAI</TabsTrigger>
-          <TabsTrigger value="CV">CV</TabsTrigger>
-          <TabsTrigger value="RL">RL</TabsTrigger>
-          <TabsTrigger value="NLP">NLP</TabsTrigger>
+      <Tabs defaultValue="GEN_AI" className="space-y-8">
+        <TabsList className="flex flex-wrap justify-center gap-2">
+          {Object.entries(teamsData).map(([key]) => (
+            <TabsTrigger
+              key={key}
+              value={key}
+              className="px-4 py-2 rounded-full transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
+              {key}
+            </TabsTrigger>
+          ))}
         </TabsList>
-        <TabsContent value="GEN-AI">
-          <DynamicCard content={placeholderContent.GEN_AI} />
-        </TabsContent>
-        <TabsContent value="CV">
-          <DynamicCard content={placeholderContent.CV} />
-        </TabsContent>
-        <TabsContent value="RL">
-          <DynamicCard content={placeholderContent.RL} />
-        </TabsContent>
-        <TabsContent value="NLP">
-          <DynamicCard content={placeholderContent.NLP} />
-        </TabsContent>
+        {Object.entries(teamsData).map(([key, content]) => (
+          <TabsContent key={key} value={key} className="mx-auto max-w-5xl">
+            <TeamContent content={content} />
+          </TabsContent>
+        ))}
       </Tabs>
     </div>
   );

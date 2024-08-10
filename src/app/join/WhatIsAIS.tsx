@@ -6,9 +6,9 @@ import PolaroidStack from "@/custom_components/PolaroidStack";
 
 export default function WhatIsAIS() {
   const randomImages = [
-    { src: 'https://picsum.photos/800/600?random=1', alt: 'Random Image 1' },
-    { src: 'https://picsum.photos/800/600?random=2', alt: 'Random Image 2' },
-    { src: 'https://picsum.photos/800/600?random=3', alt: 'Random Image 3' },
+    { src: "https://picsum.photos/800/600?random=1", alt: "Random Image 1" },
+    { src: "https://picsum.photos/800/600?random=2", alt: "Random Image 2" },
+    { src: "https://picsum.photos/800/600?random=3", alt: "Random Image 3" },
   ];
 
   return (
