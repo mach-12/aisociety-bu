@@ -18,7 +18,7 @@ export default function AboutUsSection() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center md:text-left mb-6">
             About Us
           </h2>
-          <p className="text-muted-foreground md:text-xl lg:text-base xl:text-xl">
+          <p className="text-muted-foreground text-center md:text-left md:text-xl lg:text-base xl:text-xl">
             {contentData.club.about.text}
           </p>
           <Button variant="link" className="mt-6 mx-auto block">

@@ -10,12 +10,12 @@ export default function WhatIsAIS() {
     { src: "https://picsum.photos/800/600?random=3", alt: "Random Image 3" },
   ];
   return (
-    <div>
-      <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl text-center mb-6">
+    <div className="mx-auto max-w-6xl p-6 border rounded-xl mt-6">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center md:text-left mb-6">
         What is AI Society?
       </h2>
       <div className="flex flex-col md:flex-row justify-start text-left gap-8 md:gap-32">
-        <p className="text-foreground md:text-xl xl:text-2xl w-full md:w-1/2 text-center sm:text-left">
+        <p className="text-muted-foreground md:text-xl xl:text-2xl w-full md:w-1/2 text-center md:text-left">
           The{" "}
           <span className="font-bold">
             Artificial Intelligence Society (AIS){" "}
