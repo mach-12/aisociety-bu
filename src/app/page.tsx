@@ -10,12 +10,14 @@ import PublicationsSection from "@/custom_components/HomePageComponents/Publicat
 
 import React from "react";
 import HeroSection from "@/custom_components/HomePageComponents/HeroSection";
+import { Features } from "@/custom_components/HomePageComponents/Features";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
       <AboutUsSection />
+      <Features />
       <NewsSection />
       <ProjectsSection />
       <PublicationsSection />
