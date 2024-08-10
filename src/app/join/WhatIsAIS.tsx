@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import contentData from "@/contentData";
 import PolaroidStack from "@/custom_components/PolaroidStack";
 
 export default function WhatIsAIS() {
@@ -41,6 +40,6 @@ export default function WhatIsAIS() {
           <PolaroidStack images={randomImages} />
         </div> */ }
       </div>
-    </section>
+    </div>
   );
 }
