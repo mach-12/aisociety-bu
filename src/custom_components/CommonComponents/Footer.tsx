@@ -8,6 +8,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Mail, Github, Instagram, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FooterSection = ({
   title,
@@ -64,39 +65,41 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
-        { href: "/about", label: "About" },
-        { href: "/events", label: "Events" },
+        { href: "/", label: "About" },
+        { href: "/", label: "Events" },
+
+
       ],
     },
     {
       title: "Follow us",
       links: [
-        { href: "https://github.com/ai-society", label: "Github" },
-        { href: "https://instagram.com/ai-society", label: "Instagram" },
+        { href: "https://github.com/bennettai", label: "Github" },
+        { href: "https://www.instagram.com/ais.bennett/", label: "Instagram" },
       ],
     },
     {
       title: "Legal",
       links: [
-        { href: "/privacy-policy", label: "Privacy Policy" },
-        { href: "/terms-conditions", label: "Terms & Conditions" },
+        { href: "/", label: "Privacy Policy" },
+        { href: "/", label: "Terms & Conditions" },
       ],
     },
   ];
 
   const socialIcons = [
-    { Icon: Mail, label: "Gmail", href: "mailto:contact@aisociety.com" },
+    { Icon: Mail, label: "Gmail", href: "mailto:ais@bennett.edu.in" },
     {
-      Icon: Phone,
+      Icon: FaWhatsapp,
       label: "WhatsApp",
-      href: "https://wa.me/yourwhatsappnumber",
+      href: "https://chat.whatsapp.com/JNWPTs2NwBf1sTaHMF4t3Y",
     },
     {
       Icon: Instagram,
       label: "Instagram",
-      href: "https://instagram.com/ai-society",
+      href: "https://www.instagram.com/ais.bennett/",
     },
-    { Icon: Github, label: "GitHub", href: "https://github.com/ai-society" },
+    { Icon: Github, label: "GitHub", href: "https://github.com/bennettai" },
   ];
 
   return (
@@ -104,8 +107,8 @@ const Footer = () => {
       <div className="container mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link href="/">
-              <div className="flex items-center">
+            <Link href="/" target="_blank">
+              <div className="flex items-csenter">
                 <Image
                   src="/AISociety_Logo_Dark.png"
                   width={200}
@@ -130,10 +133,10 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2024{" "}
-            <Link href="/" className="hover:underline">
-              AI Society™
+            <Link href="/" target="_blank" className="hover:underline">
+              AI Society
             </Link>
-            . All Rights Reserved.
+            , Specialization Club of Bennett University Under SCSET BU
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             {socialIcons.map((icon) => (

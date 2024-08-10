@@ -8,6 +8,7 @@ import ContactUs from "./ContactUs";
 import FAQs from "./FAQs";
 import Navbar from "@/custom_components/CommonComponents/Navbar";
 import Footer from "@/custom_components/CommonComponents/Footer";
+import { Features } from "@/custom_components/HomePageComponents/Features";
 
 export default function Join() {
   return (
@@ -18,6 +19,8 @@ export default function Join() {
         </h1> */}
         <JoinUsBadge />
         <WhatIsAIS />
+        <Features />
+
         <SocietyStructure />
         <TeamStructure />
         <HowToJoin />

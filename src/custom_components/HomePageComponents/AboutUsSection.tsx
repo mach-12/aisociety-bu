@@ -20,9 +20,9 @@ export default function AboutUsSection() {
           <p className="text-muted-foreground text-center md:text-left md:text-xl lg:text-base xl:text-xl">
             {contentData.club.about.text}
           </p>
-          <Button variant="link" className="mt-6 mx-auto block">
+          {/* <Button variant="link" className="mt-6 mx-auto block">
             Read More
-          </Button>
+          </Button> */}
         </div>
         <div className="flex items-center justify-center">
           <PolaroidStack images={randomImages} />

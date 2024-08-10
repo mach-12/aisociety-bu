@@ -24,7 +24,7 @@ const steps: Step[] = [
     formLink: "#",
     dates: "9th-12th August (till noon)",
     status: "Ongoing",
-    applications: 120,
+    applications: 60,
   },
   {
     step: "Step 2",

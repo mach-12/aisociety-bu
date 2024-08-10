@@ -11,17 +11,21 @@ import PublicationsSection from "@/custom_components/HomePageComponents/Publicat
 import React from "react";
 import HeroSection from "@/custom_components/HomePageComponents/HeroSection";
 import { Features } from "@/custom_components/HomePageComponents/Features";
+import EventsSection from "@/custom_components/HomePageComponents/Events";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
       <AboutUsSection />
+ 
       <Features />
-      <NewsSection />
-      <ProjectsSection />
-      <PublicationsSection />
-      <LeadershipSection />
+
+      {/* <NewsSection /> */}
+      <EventsSection />
+      {/* <ProjectsSection /> */}
+      {/* <PublicationsSection /> */}
+      {/* <LeadershipSection /> */}
       <JoinUsSection />
     </main>
   );

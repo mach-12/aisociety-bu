@@ -12,29 +12,29 @@ const contentData = {
       text: "The AI Specialization Club (AIS) at Bennett University is dedicated to fostering a deep passion for Artificial Intelligence. The club engages in end-to-end project development, achieves victories in hackathons, conducts informative workshops, upskills members through guidance from senior student mentors as well as experienced faculty members. We actively participate in open-source development as well.",
       image: "/ais-hero.jpg",
     },
-    news: [
+    events: [
       {
-        title: "Google ML Fest",
+        title: "Campus AI Fest",
         description:
           "Talks by Google Developer Experts, project showcases, and explorations of KerasCV, KerasNLP, and Vertex AI.",
-        date: "June 1, 2024",
-        image: "https://picsum.photos/300/200?random=5",
+        date: "October 14, 2024",
+        image: "/event-ai-fest.png",
         link: "#",
       },
       {
         title: "LLM Workshop",
         description:
           "Custom Recipe Generation LLM, awards for top-performing students, exploration of Langchain, OpenAI, Kaggle, and Pandas.",
-        date: "May 15, 2024",
-        image: "https://picsum.photos/300/200?random=6",
+        date: "November 23, 2023",
+        image: "/event-llm-workshop.png",
         link: "#",
       },
       {
         title: "Build-it-Yourself Workshop",
         description:
           "Transformer-Based NER e-commerce chatbot, FastAPI deployment, exploration of Keras, TensorFlow, HuggingFace, and FastAPI.",
-        date: "April 30, 2024",
-        image: "https://picsum.photos/300/200?random=7",
+        date: "February 12-17, 2024",
+        image: "/event-biy.png",
         link: "#",
       },
     ],

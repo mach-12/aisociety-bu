@@ -36,7 +36,9 @@ const Navbar = () => {
       </Link>
       <NavigationMenu>
         <NavigationMenuList className="hidden lg:flex gap-4">
-          {["About", "Events", "Team", "Blog", "Projects", "Publications"].map(
+          {/* {["About", "Events", "Team", "Blog", "Projects", "Publications"].map( */}
+          {[].map(
+
             (item) => (
               <NavigationMenuItem key={item}>
                 <NavigationMenuLink asChild>
@@ -74,11 +76,11 @@ const Navbar = () => {
             {[
               "Home",
               "About",
-              "Events",
-              "Team",
-              "Blog",
-              "Projects",
-              "Publications",
+              // "Events",
+              // "Team",
+              // "Blog",
+              // "Projects",
+              // "Publications",
               "Join",
             ].map((item) => (
               <Link

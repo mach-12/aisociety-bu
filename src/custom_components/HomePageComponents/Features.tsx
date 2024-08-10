@@ -54,13 +54,10 @@ export function Features() {
   const rightRef4 = useRef<HTMLDivElement>(null);
 
   return (
-    
     <div
       className="mx-auto max-w-4xl relative flex  w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-4 md:p-10 md:shadow-xl "
       ref={containerRef}
     >
-
-      
       <div className="flex w-full max-w-4xl flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Element */}
         <Card ref={leftRef}>Students</Card>
