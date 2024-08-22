@@ -19,12 +19,12 @@ const steps: Step[] = [
   {
     step: "Step 1",
     title: "Fill the Form",
-    description: "Forms are currently Open for Senior Core.",
+    description: "Forms are currently Open for Junior Core.",
     icon: "📝",
     formLink: "#",
-    dates: "9th-12th August (till noon)",
+    dates: "To be announced",
     status: "Ongoing",
-    applications: 60,
+    applications: 0,
   },
   {
     step: "Step 2",
@@ -32,7 +32,7 @@ const steps: Step[] = [
     description:
       "Form review period where you will be judged by the form responses.",
     icon: "🔍",
-    dates: "11th-12th August",
+    dates: "To be announced",
     status: "Upcoming",
   },
   {
@@ -41,7 +41,7 @@ const steps: Step[] = [
     description:
       "Candidate is interviewed on technical and collaborative skills.",
     icon: "🗣️",
-    dates: "12-13th August",
+    dates: "To be announced",
     status: "Upcoming",
   },
 ];
