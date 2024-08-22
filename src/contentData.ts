@@ -2,7 +2,7 @@
 const contentData = {
   whatsapp_link: "https://chat.whatsapp.com/JNWPTs2NwBf1sTaHMF4t3Y",
   form_link:
-    "https://docs.google.com/forms/d/e/1FAIpQLSdUtPtlp6P3f2XNd5KhEuFnSpxT-ZVyrwG-YopDZfZLnEX9bQ/viewform",
+    "https://docs.google.com/forms/d/1AWch9cXvkOtvlDGXiYe31th86wNJ5eYnoq_GSQJ1wEs/viewform",
   club: {
     logo: "/AISociety_Logo_Dark.png",
     name: "Artificial Intelligence Society (AIS)",
