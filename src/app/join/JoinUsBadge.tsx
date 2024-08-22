@@ -8,10 +8,10 @@ export default function JoinUsBadge() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex flex-col items-start space-y-2">
           <h2 className="text-lg font-bold text-primary-foreground">
-            Applications Open (Senior Core - 2nd, 3rd Years)
+            Applications Open (Junior Core - 1st, 2nd Years)
           </h2>
           <p className="text-sm text-primary-foreground">
-            Deadline: August 12th, 2024
+            Deadline: To be announced
           </p>
         </div>
         <Link
