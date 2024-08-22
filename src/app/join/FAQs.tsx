@@ -14,21 +14,21 @@ type FAQ = {
 const faqData: FAQ[] = [
   {
     id: "item-1",
-    question: "Who can apply for the Senior Core positions?",
+    question: "Who can apply for the Junior Core positions?",
     answer:
       "If you aren’t a fresher, and are in B.Tech / BCA / MCA / M. Tech, you are eligible. If you are passionate about AI, have relevant experience, and are eager to contribute to the growth of our community, you can apply. We encourage individuals with leadership qualities and a vision for the future of AIS to take part.",
   },
   {
     id: "item-2",
-    question: "What is the selection criteria for the Senior Core positions?",
+    question: "What is the selection criteria for the Junior  Core positions?",
     answer:
       "Selection will be based on a combination of factors including your experience, skills, leadership qualities, past contributions in AI, and your vision for the role. We are looking for individuals who demonstrate a strong commitment to our mission and the ability to lead initiatives.",
   },
   {
     id: "item-3",
-    question: "What are the responsibilities of a Senior Core member?",
+    question: "What are the responsibilities of a Junior Core member?",
     answer:
-      "As a Senior Core member, you’ll be responsible for leading specific sub-domains within AIS, organizing events, mentoring juniors, and ensuring that our projects align with the society’s goals. You’ll play a key role in shaping the direction of AIS and its initiatives.",
+      "As a Junior Core member, you’ll be responsible for leading specific sub-domains within AIS, organizing events, mentoring juniors, and ensuring that our projects align with the society’s goals. You’ll play a key role in shaping the direction of AIS and its initiatives.",
   },
   {
     id: "item-4",
