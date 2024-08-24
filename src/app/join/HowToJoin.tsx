@@ -78,7 +78,7 @@ export default function HowToJoin() {
                     className="inline-block w-full text-center py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300"
                     prefetch={false}
                   >
-                    Senior Core Form
+                    Junior Core Form
                   </Link>
                 )}
                 {step.applications && (

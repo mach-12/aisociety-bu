@@ -10,6 +10,7 @@ export default function JoinUsSection() {
       className="py-12 md:py-24 lg:py-32 bg-secondary text-secondary-foreground"
     >
       <RippleCard />
+
     </section>
   );
 }

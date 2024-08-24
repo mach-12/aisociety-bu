@@ -20,7 +20,7 @@ const faqData: FAQ[] = [
   },
   {
     id: "item-2",
-    question: "What is the selection criteria for the Junior  Core positions?",
+    question: "What is the selection criteria for the Junior Core positions?",
     answer:
       "Selection will be based on a combination of factors including your experience, skills, leadership qualities, past contributions in AI, and your vision for the role. We are looking for individuals who demonstrate a strong commitment to our mission and the ability to lead initiatives.",
   },
