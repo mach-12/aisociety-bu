@@ -1,4 +1,4 @@
-import Link from "next/link";
+  import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import contentData from "@/contentData";
@@ -19,11 +19,11 @@ const steps: Step[] = [
   {
     step: "Step 1",
     title: "Fill the Form",
-    description: "Forms are currently Open for Junior Core.",
+    description: "Forms for Junior Core Technical + Non-Technical positions",
     icon: "📝",
     formLink: "#",
-    dates: "To be announced",
-    status: "Ongoing",
+    dates: "Open from 25th August at 3 pm",
+    status: "Upcoming",
     applications: 0,
   },
   {
@@ -32,7 +32,7 @@ const steps: Step[] = [
     description:
       "Form review period where you will be judged by the form responses.",
     icon: "🔍",
-    dates: "To be announced",
+    dates: "1st September-3rd September",
     status: "Upcoming",
   },
   {
