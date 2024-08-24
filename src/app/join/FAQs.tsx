@@ -46,7 +46,7 @@ const faqData: FAQ[] = [
 
 export default function FAQs() {
   return (
-    <div className="container mx-auto max-w-5xl py-12 md:py-24 lg:py-32">
+    <section className="container mx-auto max-w-5xl py-12 md:py-24 lg:py-32" id='faq'>
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6">
         Frequently Asked Questions
       </h2>
@@ -58,6 +58,6 @@ export default function FAQs() {
           </AccordionItem>
         ))}
       </Accordion>
-    </div>
+    </section>
   );
 }

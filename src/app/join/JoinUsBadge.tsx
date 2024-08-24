@@ -11,7 +11,7 @@ export default function JoinUsBadge() {
             Applications Open Soon (Junior Core - 1st Year students)
           </h2>
           <p className="text-sm text-primary-foreground">
-            Deadline: To be announced
+            Deadline: 11:59 PM, 1st September, 2024 
           </p>
         </div>
         <Link

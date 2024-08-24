@@ -48,8 +48,12 @@ const steps: Step[] = [
 
 export default function HowToJoin() {
   return (
-    <section className="mx-auto max-w-5xl py-12 md:py-24 lg:py-32">
+    <section
+      id="guidelines"
+      className="mx-auto max-w-5xl py-12 md:py-24 lg:py-32"
+    >
       <div className="container mx-auto px-4">
+        {/* How to Join Section */}
         <h2 className="text-4xl font-bold text-center mb-12">How to Join</h2>
         <div className="grid gap-8 md:grid-cols-3">
           {steps.map((step, index) => (
@@ -90,6 +94,222 @@ export default function HowToJoin() {
             </Card>
           ))}
         </div>
+
+        {/* Interview Guidelines Section */}
+        <section className="pt-14">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">
+            Interview Guidelines and Preparation
+          </h2>
+
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-6">
+            For Technical Positions
+          </h3>
+          <ul className="list-disc text-left pl-4 md:pl-6 text-gray-700 space-y-3 md:space-y-4">
+            <li>
+              <strong>For the interview, we will:</strong>
+              <ul className="list-inside list-disc pl-4 space-y-1 md:space-y-2">
+                <li>
+                  Verify your Kaggle account and check the completion of these
+                  courses along with their certificates.
+                </li>
+                <li>
+                  You will be asked questions regarding the Kaggle courses.
+                </li>
+                <li>
+                  Ask you for sure: Why do you want to join the CV / RL / GenAI
+                  / NLP department? Share a problem you want to solve with AI in
+                  this domain and your approach.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Bring your laptop to the interview.</strong> Ensure it’s
+              fully charged and ready to showcase your work.
+            </li>
+
+            <li>
+              <strong>
+                Create a{" "}
+                <a
+                  href="https://www.kaggle.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  Kaggle account.
+                </a>
+              </strong>{" "}
+              <br></br>
+              Kaggle is a free, online community and platform for AI
+              competitions, learning, and collaboration. It is used by
+              recruiters worldwide.
+            </li>
+            <li>
+              <strong>
+                Complete the following mandatory courses on Kaggle and obtain
+                the certificates:
+              </strong>
+              <ul className="list-inside list-decimal pl-4 space-y-1 md:space-y-2">
+                <li>
+                  <a
+                    href="https://www.kaggle.com/learn/python"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    <strong>Python Course</strong>
+                  </a>{" "}
+                  (Mandatory)
+                </li>
+                <li>
+                  <a
+                    href="https://www.kaggle.com/learn/intro-to-machine-learning"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    <strong>Intro to Machine Learning</strong>
+                  </a>{" "}
+                  (Mandatory)
+                </li>
+                <li>
+                  <a
+                    href="https://www.kaggle.com/learn/intro-to-deep-learning"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    <strong>Intro to Deep Learning</strong>
+                  </a>{" "}
+                  (Optional, recommended for advanced learners)
+                </li>
+                <li>
+                  <a
+                    href="https://www.kaggle.com/learn/intermediate-machine-learning"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    <strong>Intermediate Machine Learning</strong>
+                  </a>{" "}
+                  (Optional, recommended for advanced learners)
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>
+                You can follow this free YouTube course by World's first Kaggle
+                Grandmaster Abhishek Thakur's
+              </strong>{" "}
+              <a
+                href="https://www.youtube.com/watch?v=_55G24aghPY&list=PL98nY_tJQXZnP-k3qCDd1hljVSciDV9_N&index=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                Kaggle Tutorial for Beginners
+              </a>
+              .
+            </li>
+
+            <li>
+              <strong>Post Certificate on LinkedIn tagging </strong>
+              <a
+                href="https://www.linkedin.com/company/bennett-artificial-intelligence-society/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                @Artificial Intelligence Society Bennett University
+              </a>
+              , mentioning the completion of these courses, and include the
+              certificate links in your post. (Optional, will be considered)
+            </li>
+
+            <li>
+              <strong>
+                We also appreciate additional skills like Web/App development,
+                Video Editing, or Public Speaking.
+              </strong>
+            </li>
+          </ul>
+
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold pt-8 mb-6">
+            For Community Outreach Positions
+          </h3>
+          <ul className="list-disc text-left pl-4 md:pl-6 text-gray-700 space-y-3 md:space-y-4">
+            <li>
+              <strong>Bring your laptop to the interview.</strong> Be prepared
+              to showcase your work and projects.
+            </li>
+            <li>
+              <strong>
+                If applying for Design, Video Editing, or Photography:
+              </strong>
+              <ul className="list-inside list-disc pl-4 space-y-1 md:space-y-2">
+                <li>
+                  Submit your designs in the form and be ready to present them
+                  during the interview. Relevant examples include posters,
+                  reels, or any visual content you’ve created.
+                </li>
+                <li>Skills required: Figma, Canva, Adobe Suite, etc.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>For Social Media Management:</strong>
+              <ul className="list-inside list-disc pl-4 space-y-1 md:space-y-2">
+                <li>Provide examples of pages or accounts you have managed,</li>
+              </ul>
+            </li>
+            <li>
+              <strong>For Management/Public Relations:</strong>
+              <ul className="list-inside list-disc pl-4 space-y-1 md:space-y-2">
+                <li>
+                  Your behavior, personality, and speaking skills will be
+                  assessed through an on-the-spot task during the interview.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold pt-8 mb-6">
+            General Guidelines for All Positions
+          </h3>
+          <ul className="list-disc text-left pl-4 md:pl-6 text-gray-700 space-y-3 md:space-y-4">
+            <li>
+              <strong>Be on time.</strong> Punctuality is crucial.
+            </li>
+            <li>
+              <strong>Dress appropriately.</strong> Professional attire is
+              expected.
+            </li>
+            <li>
+              <strong>
+                Bring your laptop and any necessary accessories (charger, mouse,
+                etc.).
+              </strong>{" "}
+              Ensure your laptop is fully functional and ready for use.
+            </li>
+            <li>
+              <strong>
+                Be prepared to discuss your work, skills, and experience in
+                detail.
+              </strong>
+            </li>
+            <li>
+              <strong>Showcase relevant projects.</strong> Highlight the work
+              that best represents your abilities and aligns with the position
+              you’re applying for.
+            </li>
+            <li>
+              <strong>Ask questions.</strong> Engage with the interviewers by
+              asking insightful questions about the role and organization.
+            </li>
+          </ul>
+        </section>
+
+        {/* Join Us Badge */}
         <div className="mt-12">
           <JoinUsBadge />
         </div>

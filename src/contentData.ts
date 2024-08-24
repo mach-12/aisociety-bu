@@ -17,7 +17,7 @@ const contentData = {
         title: "Campus AI Fest",
         description:
           "Talks by Google Developer Experts, project showcases, and explorations of KerasCV, KerasNLP, and Vertex AI.",
-        date: "October 14, 2024",
+        date: "October 14, 2023",
         image: "/event-ai-fest.png",
         link: "#",
       },

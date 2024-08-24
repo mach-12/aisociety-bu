@@ -309,7 +309,7 @@ const TeamStructure: FC = () => {
   };
 
   return (
-    <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <section className="container mx-auto py-8 px-4 sm:px-6 lg:px-8" id='teams'>
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center mb-8">
         Our Teams
       </h1>
@@ -334,7 +334,7 @@ const TeamStructure: FC = () => {
           </TabsContent>
         ))}
       </Tabs>
-    </div>
+    </section>
   );
 };
 

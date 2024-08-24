@@ -17,7 +17,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <AboutUsSection />
- 
+
       <Features />
 
       {/* <NewsSection /> */}
