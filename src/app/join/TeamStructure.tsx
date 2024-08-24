@@ -73,7 +73,7 @@ const teamsData: Record<string, Content> = {
     workDone: [
       "Generated 1000+ images",
       "Trained on diverse datasets",
-      "Working on 3 research papers",
+      "Working on 2 research papers",
       "Industry collaborations",
     ],
     latestTrends: [
@@ -110,7 +110,7 @@ const teamsData: Record<string, Content> = {
       "Trained 3 neural networks",
       "20% accuracy improvement",
       "Real-time detection system",
-      "A research paper",
+      "2 research papers",
     ],
     latestTrends: [
       { trend: "Real-time processing", direction: "up" },
@@ -182,7 +182,7 @@ const teamsData: Record<string, Content> = {
     workDone: [
       "Created 4 state-of-the-art chatbots",
       "Improved text processing speed by 30%",
-      "4 research papers",
+      "2 research papers",
       "Collaborations with tech giants",
     ],
     latestTrends: [
