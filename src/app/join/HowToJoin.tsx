@@ -199,8 +199,8 @@ export default function HowToJoin() {
 
             <li>
               <strong>
-                You can follow this free YouTube course by World's first Kaggle
-                Grandmaster Abhishek Thakur's
+                You can follow this free YouTube course by World&apos;s first Kaggle
+                Grandmaster Abhishek Thakur&apos;s
               </strong>{" "}
               <a
                 href="https://www.youtube.com/watch?v=_55G24aghPY&list=PL98nY_tJQXZnP-k3qCDd1hljVSciDV9_N&index=1"
