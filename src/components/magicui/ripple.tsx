@@ -42,10 +42,6 @@ const Ripple = React.memo(function Ripple({
         );
       })}
     </div>
-
-    
-
-    
   );
 });
 

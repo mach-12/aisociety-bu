@@ -5,7 +5,7 @@ import Link from "next/link";
 export function RippleCard() {
   return (
     <div className="py-24 max-w-5xl mx-auto relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-slate-200 md:shadow-xl">
-      <div className="">
+      <div className="text-center">
         <Ripple />
         <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6 ">
           Join Us

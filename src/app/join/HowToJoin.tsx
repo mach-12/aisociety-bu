@@ -30,7 +30,7 @@ const steps: Step[] = [
     step: "Step 2",
     title: "Form Shortlisting",
     description:
-      "Form review period where you will be judged by the form responses.",
+      "Form review period where you will be judged by the form responses. AI Generated Form Responses will be rejected. ",
     icon: "🔍",
     dates: "To be announced",
     status: "Upcoming",
@@ -105,6 +105,11 @@ export default function HowToJoin() {
             For Technical Positions
           </h3>
           <ul className="list-disc text-left pl-4 md:pl-6 text-gray-700 space-y-3 md:space-y-4">
+            <li>
+              <strong>
+                AI Generated Form Responses will be rejected in review.
+              </strong>
+            </li>
             <li>
               <strong>For the interview, we will:</strong>
               <ul className="list-inside list-disc pl-4 space-y-1 md:space-y-2">
@@ -199,8 +204,8 @@ export default function HowToJoin() {
 
             <li>
               <strong>
-                You can follow this free YouTube course by World&apos;s first Kaggle
-                Grandmaster Abhishek Thakur&apos;s
+                You can follow this free YouTube course by World&apos;s first
+                Kaggle Grandmaster Abhishek Thakur&apos;s
               </strong>{" "}
               <a
                 href="https://www.youtube.com/watch?v=_55G24aghPY&list=PL98nY_tJQXZnP-k3qCDd1hljVSciDV9_N&index=1"
@@ -259,7 +264,7 @@ export default function HowToJoin() {
             <li>
               <strong>For Social Media Management:</strong>
               <ul className="list-inside list-disc pl-4 space-y-1 md:space-y-2">
-                <li>Provide examples of pages or accounts you have managed,</li>
+                <li>Provide examples of pages or accounts you have managed.</li>
               </ul>
             </li>
             <li>

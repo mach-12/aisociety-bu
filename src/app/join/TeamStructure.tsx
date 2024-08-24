@@ -29,14 +29,20 @@ type Trend = {
   trend: string;
   direction: "up" | "down";
 };
+type Domain = {
+  domain: string;
+  responsibilities: string[];
+};
 
 type Content = {
-  title: string;
-  description: string;
-  potentialProjects: Project[];
-  workDone: string[];
-  latestTrends: Trend[];
-  responsibilities: string[];
+  isTechnical: boolean;
+  title?: string;
+  description?: string;
+  potentialProjects?: Project[];
+  workDone?: string[];
+  latestTrends?: Trend[];
+  responsibilities?: string[];
+  domains?: Domain[]; // Add domains for non-technical teams
 };
 
 type BentoGridProps = {
@@ -47,6 +53,8 @@ type BentoGridProps = {
 // Data
 const teamsData: Record<string, Content> = {
   GenAI: {
+    isTechnical: true,
+
     title: "Generative AI",
     description:
       "Generative AI focuses on creating new content using machine learning models.",
@@ -81,6 +89,8 @@ const teamsData: Record<string, Content> = {
     ],
   },
   CV: {
+    isTechnical: true,
+
     title: "Computer Vision",
     description:
       "Computer vision enables computers to interpret and understand visual information.",
@@ -115,6 +125,8 @@ const teamsData: Record<string, Content> = {
     ],
   },
   RL: {
+    isTechnical: true,
+
     title: "Reinforcement Learning",
     description:
       "Reinforcement Learning involves training models to make sequences of decisions.",
@@ -149,6 +161,8 @@ const teamsData: Record<string, Content> = {
     ],
   },
   NLP: {
+    isTechnical: true,
+
     title: "Natural Language Processing",
     description:
       "NLP enables computers to understand, interpret, and generate human language.",
@@ -183,6 +197,46 @@ const teamsData: Record<string, Content> = {
       "Cross-disciplinary linguistics collaboration",
     ],
   },
+  CommunityOutreach: {
+    title: "Community Outreach",
+    isTechnical: false,
+    description:
+      "Oversee community engagement through social media, event management, content creation, public speaking, and sponsorship outreach.",
+    domains: [
+      {
+        domain: "Social Media Management",
+        responsibilities: ["Engage with audience", "Monitor social channels"],
+      },
+      {
+        domain: "Event Management",
+        responsibilities: [
+          "Organize community events",
+          "Coordinate with vendors and partners",
+        ],
+      },
+      {
+        domain: "Designing",
+        responsibilities: [
+          "Create promotional materials",
+          "Design social media graphics",
+        ],
+      },
+      {
+        domain: "Public Speaking & Sponsorship Outreach",
+        responsibilities: [
+          "Deliver presentations at events",
+          "Reach out to potential sponsors",
+        ],
+      },
+      {
+        domain: "Video Editing & Photography",
+        responsibilities: [
+          "Edit videos for community content",
+          "Capture photos at events",
+        ],
+      },
+    ],
+  },
 };
 
 // Components
@@ -212,93 +266,150 @@ const TrendItem: FC<{ trend: Trend }> = ({ trend }) => (
   </div>
 );
 
-const BentoGrid: FC<BentoGridProps> = ({ content, gradient }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-    {/* Team Overview */}
-    <Card
-      className={`col-span-1 md:col-span-2 lg:col-span-4 overflow-hidden ${gradient}`}
-    >
-      <CardHeader className="text-white flex flex-col items-center text-center p-6">
-        <Users className="w-16 h-16 mb-3" />
-        <CardTitle className="text-2xl mb-2">{content.title}</CardTitle>
-        <CardDescription className="text-white/80">
-          {content.description}
-        </CardDescription>
-      </CardHeader>
-    </Card>
+const BentoGrid: FC<BentoGridProps> = ({ content, gradient }) => {
+  if (!content.isTechnical) {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Non-technical Team Overview */}
+        <Card
+          className={`col-span-1 md:col-span-2 lg:col-span-4 overflow-hidden ${gradient}`}
+        >
+          <CardHeader className="text-white flex flex-col items-center text-center p-6">
+            <Users className="w-16 h-16 mb-3" />
+            <CardTitle className="text-2xl mb-2">{content.title}</CardTitle>
+            <CardDescription className="text-white md:text-md font-semibold">
+              {content.description}
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
-    {/* Work Done */}
-    <Card className="col-span-1 md:col-span-2 lg:col-span-2 overflow-y-auto flex flex-col">
-      <CardHeader className="flex-shrink-0">
-        <CardTitle className="flex items-center gap-2">
-          <CheckCircle className="w-5 h-5" />
-          Work Done
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="flex-1">
-        <div className="flex flex-wrap gap-2">
-          {content.workDone.map((work, index) => (
-            <Badge key={index} variant="outline">
-              {work}
-            </Badge>
+        {/* Domains and Responsibilities for Non-Technical Team */}
+        {content.domains &&
+          content.domains.map((domain, index) => (
+            <Card
+              key={index}
+              className="col-span-1 md:col-span-2 lg:col-span-2 overflow-y-auto flex flex-col"
+            >
+              <CardHeader className="flex-shrink-0">
+                <CardTitle className="flex items-center gap-2">
+                  <List className="w-5 h-5" />
+                  {domain.domain}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  {domain.responsibilities
+                    .slice(0, 5)
+                    .map((responsibility, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <CheckCircle className="w-4 h-4 mt-1 text-green-500 flex-shrink-0" />
+                        <span>{responsibility}</span>
+                      </li>
+                    ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
-        </div>
-      </CardContent>
-    </Card>
+      </div>
+    );
+  }
 
-    {/* Potential Projects */}
-    <Card className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden flex flex-col">
-      <CardHeader className="flex-shrink-0">
-        <CardTitle className="flex items-center gap-2">
-          <Briefcase className="w-5 h-5" />
-          Potential Projects
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="flex-grow overflow-y-auto">
-        <div className="grid grid-cols-1 gap-4">
-          {content.potentialProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* Team Overview */}
+      <Card
+        className={`col-span-1 md:col-span-2 lg:col-span-4 overflow-hidden ${gradient}`}
+      >
+        <CardHeader className="text-white flex flex-col items-center text-center p-6">
+          <Users className="w-16 h-16 mb-3" />
+          <CardTitle className="text-2xl mb-2">{content.title}</CardTitle>
+          <CardDescription className="text-white md:text-md font-semibold">
+            {content.description}
+          </CardDescription>
+        </CardHeader>
+      </Card>
 
-    {/* Latest Trends */}
-    <Card className="col-span-1 md:col-span-1 lg:col-span-1 overflow-y-auto flex flex-col">
-      <CardHeader className="flex-shrink-0">
-        <CardTitle className="flex items-center gap-2">
-          <BarChart2 className="w-5 h-5" />
-          Latest Trends
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="flex-1 space-y-2">
-        {content.latestTrends.map((trend, index) => (
-          <TrendItem key={index} trend={trend} />
-        ))}
-      </CardContent>
-    </Card>
+      {/* Work Done */}
+      {content.isTechnical && content.workDone && (
+        <Card className="col-span-1 md:col-span-2 lg:col-span-2 overflow-y-auto flex flex-col">
+          <CardHeader className="flex-shrink-0">
+            <CardTitle className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
+              Work Done
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex-1">
+            <div className="flex flex-wrap gap-2">
+              {content.workDone.map((work, index) => (
+                <Badge key={index} variant="outline">
+                  {work}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
-    {/* Responsibilities */}
-    <Card className="col-span-1 md:col-span-1 lg:col-span-1 overflow-y-auto flex flex-col">
-      <CardHeader className="flex-shrink-0">
-        <CardTitle className="flex items-center gap-2">
-          <List className="w-5 h-5" />
-          Responsibilities
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="flex-1">
-        <ul className="space-y-2 text-sm text-muted-foreground">
-          {content.responsibilities.map((responsibility, index) => (
-            <li key={index} className="flex items-start space-x-2">
-              <CheckCircle className="w-4 h-4 mt-1 text-green-500 flex-shrink-0" />
-              <span>{responsibility}</span>
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-    </Card>
-  </div>
-);
+      {/* Potential Projects */}
+      {content.isTechnical && content.potentialProjects && (
+        <Card className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden flex flex-col">
+          <CardHeader className="flex-shrink-0">
+            <CardTitle className="flex items-center gap-2">
+              <Briefcase className="w-5 h-5" />
+              Potential Projects
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex-grow overflow-y-auto">
+            <div className="grid grid-cols-1 gap-4">
+              {content.potentialProjects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Latest Trends */}
+      {content.isTechnical && content.latestTrends && (
+        <Card className="col-span-1 md:col-span-1 lg:col-span-1 overflow-y-auto flex flex-col">
+          <CardHeader className="flex-shrink-0">
+            <CardTitle className="flex items-center gap-2">
+              <BarChart2 className="w-5 h-5" />
+              Latest Trends
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex-1 space-y-2">
+            {content.latestTrends.map((trend, index) => (
+              <TrendItem key={index} trend={trend} />
+            ))}
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Responsibilities */}
+      {content.isTechnical && content.responsibilities && (
+        <Card className="col-span-1 md:col-span-1 lg:col-span-1 overflow-y-auto flex flex-col">
+          <CardHeader className="flex-shrink-0">
+            <CardTitle className="flex items-center gap-2">
+              <List className="w-5 h-5" />
+              Responsibilities
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex-1">
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {content.responsibilities.map((responsibility, index) => (
+                <li key={index} className="flex items-start space-x-2">
+                  <CheckCircle className="w-4 h-4 mt-1 text-green-500 flex-shrink-0" />
+                  <span>{responsibility}</span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
+    </div>
+  );
+};
 
 const TeamStructure: FC = () => {
   const gradients = {
@@ -306,15 +417,16 @@ const TeamStructure: FC = () => {
     RL: "bg-gradient-to-r from-[#EB3349] to-[#F45C43]",
     CV: "bg-gradient-to-r from-[#5433FF] via-[#20BDFF] to-[#A5FECB]",
     NLP: "bg-gradient-to-r from-[#3CA55C] to-[#B5AC49]",
+    CommunityOutreach: "bg-gradient-to-r from-slate-900 to-slate-700",
   };
 
   return (
-    <section className="container mx-auto py-8 px-4 sm:px-6 lg:px-8" id='teams'>
+    <section className="container mx-auto py-8 px-4 sm:px-6 lg:px-8" id="teams">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center mb-8">
         Our Teams
       </h1>
       <Tabs defaultValue="GenAI" className="space-y-8">
-        <TabsList className="flex flex-wrap justify-center gap-2 mb-8">
+        <TabsList className="flex flex-wrap justify-center gap-2 mb-16">
           {Object.entries(teamsData).map(([key]) => (
             <TabsTrigger
               key={key}
