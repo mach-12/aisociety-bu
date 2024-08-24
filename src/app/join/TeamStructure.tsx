@@ -57,7 +57,7 @@ const teamsData: Record<string, Content> = {
 
     title: "Generative AI",
     description:
-      "Generative AI focuses on creating new content using machine learning models.",
+      "Generative AI focuses on creating new content (image/video/text/audio) using machine learning models.",
     potentialProjects: [
       {
         status: "New",
@@ -71,9 +71,9 @@ const teamsData: Record<string, Content> = {
       },
     ],
     workDone: [
-      "Generated 100,000+ images",
+      "Generated 1000+ images",
       "Trained on diverse datasets",
-      "Published 5 papers",
+      "Working on 3 research papers",
       "Industry collaborations",
     ],
     latestTrends: [
@@ -98,19 +98,19 @@ const teamsData: Record<string, Content> = {
       {
         status: "New",
         title: "Image Classification",
-        description: "Develop system to categorize images automatically.",
+        description: "Develop a system to categorize images automatically.",
       },
       {
         status: "Ongoing",
         title: "Object Detection",
-        description: "Build system to identify objects in video footage.",
+        description: "Build a system to identify objects in video footage.",
       },
     ],
     workDone: [
-      "Trained 5 neural networks",
+      "Trained 3 neural networks",
       "20% accuracy improvement",
       "Real-time detection system",
-      "12 research papers",
+      "A research paper",
     ],
     latestTrends: [
       { trend: "Real-time processing", direction: "up" },
@@ -145,8 +145,8 @@ const teamsData: Record<string, Content> = {
     workDone: [
       "Developed 3 game-playing agents",
       "15% reward efficiency increase",
-      "7 research papers",
-      "Gaming industry partnerships",
+      "Modified traditional games",
+      "Working on language summarization using RL",
     ],
     latestTrends: [
       { trend: "Use in robotics", direction: "up" },
@@ -165,7 +165,7 @@ const teamsData: Record<string, Content> = {
 
     title: "Natural Language Processing",
     description:
-      "NLP enables computers to understand, interpret, and generate human language.",
+      "NLP enables computers to understand, interpret, and generate human language (texts).",
     potentialProjects: [
       {
         status: "New",
@@ -182,7 +182,7 @@ const teamsData: Record<string, Content> = {
     workDone: [
       "Created 4 state-of-the-art chatbots",
       "Improved text processing speed by 30%",
-      "10 research papers",
+      "4 research papers",
       "Collaborations with tech giants",
     ],
     latestTrends: [
