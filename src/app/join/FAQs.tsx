@@ -16,7 +16,7 @@ const faqData: FAQ[] = [
     id: "item-1",
     question: "Who can apply for the Junior Core positions?",
     answer:
-      "If you aren’t a fresher, and are in B.Tech / BCA / MCA / M. Tech, you are eligible. If you are passionate about AI, have relevant experience, and are eager to contribute to the growth of our community, you can apply. We encourage individuals with leadership qualities and a vision for the future of AIS to take part.",
+      "If you a fresher, and are in B.Tech / BCA / MCA / M. Tech, you are eligible. If you are passionate about AI, have relevant experience, and are eager to contribute to the growth of our community, you can apply. We encourage individuals with leadership qualities and a vision for the future of AIS to take part.",
   },
   {
     id: "item-2",
@@ -34,7 +34,7 @@ const faqData: FAQ[] = [
     id: "item-4",
     question: "How can I prepare for the selection process?",
     answer:
-      "there are going to be three rounds: Math,Coding skills,Aptitude. to have the best chance of clearing the interview remember to revise on AI maths like deriving the log loss etc, the coding assignment will be on kaggle as for the aptitude test your mind will do just fine :3",
+      "Check the interview guidelines given above. For Technical Teams, you need to complete two courses on AI and Python. For Community Outreach, You will showcase your work and speaking skills depending on your domain. ",
   },
   {
     id: "item-5",

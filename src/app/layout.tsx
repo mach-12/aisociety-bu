@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import Navbar from "@/custom_components/CommonComponents/Navbar";
 import Footer from "@/custom_components/CommonComponents/Footer";
+import { Analytics } from '@vercel/analytics/react';
 
 const fontHeading = Manrope({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
