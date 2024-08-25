@@ -28,10 +28,11 @@ const steps: Step[] = [
     description: "Forms for Junior Core Technical + Non-Technical positions",
     icon: "📝",
     formLink: "#",
-    dates: "Open from 25th August at 3 pm",
+    dates: "Open now until 1st September 11:59pm",
     status: "Ongoing",
-    applications: 40,
+    applications: 38,
   },
+  
   {
     step: "Step 2",
     title: "Form Shortlisting",
