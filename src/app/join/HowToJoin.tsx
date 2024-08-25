@@ -29,8 +29,8 @@ const steps: Step[] = [
     icon: "📝",
     formLink: "#",
     dates: "Open from 25th August at 3 pm",
-    status: "Upcoming",
-    applications: 0,
+    status: "Ongoing",
+    applications: 40,
   },
   {
     step: "Step 2",
@@ -54,10 +54,7 @@ const steps: Step[] = [
 
 export default function HowToJoin() {
   return (
-    <section
-      id="process"
-      className="mx-auto max-w-5xl py-12 md:py-24 lg:py-32"
-    >
+    <section id="process" className="mx-auto max-w-5xl py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4">
         {/* How to Join Section */}
         <h2 className="text-4xl font-bold text-center mb-12">How to Join</h2>
@@ -110,7 +107,10 @@ export default function HowToJoin() {
           <Accordion type="single" collapsible className="space-y-6">
             <AccordionItem value="technical">
               <AccordionTrigger>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold" id="technical-guidelines">
+                <h3
+                  className="text-xl md:text-2xl lg:text-3xl font-semibold"
+                  id="technical-guidelines"
+                >
                   ❗ For Technical Positions
                 </h3>
               </AccordionTrigger>
@@ -130,7 +130,7 @@ export default function HowToJoin() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:underline"
-                      > 
+                      >
                         Kaggle account.
                       </a>
                     </strong>{" "}
@@ -260,7 +260,10 @@ export default function HowToJoin() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="community-outreach" id="community-outreach-guidelines">
+            <AccordionItem
+              value="community-outreach"
+              id="community-outreach-guidelines"
+            >
               <AccordionTrigger>
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
                   ❗ For Community Outreach Positions
