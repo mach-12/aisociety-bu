@@ -90,7 +90,7 @@ export default function HowToJoin() {
                 )}
                 {step.applications && (
                   <div className="mt-4 text-sm text-gray-500">
-                    Applications: {step.applications}
+                    Applications: {step.applications} +
                   </div>
                 )}
               </CardContent>
