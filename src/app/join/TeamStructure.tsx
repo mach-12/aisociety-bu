@@ -205,13 +205,14 @@ const teamsData: Record<string, Content> = {
     domains: [
       {
         domain: "Social Media Management",
-        responsibilities: ["Engage with audience", "Monitor social channels"],
+        responsibilities: ["Engage with audience", "Monitor social channels", "Create engaging content on Instagram"],
       },
       {
         domain: "Event Management",
         responsibilities: [
           "Organize community events",
           "Coordinate with vendors and partners",
+          "Micromanage the course of action during the time of events"
         ],
       },
       {
