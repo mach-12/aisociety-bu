@@ -55,7 +55,7 @@ const steps: Step[] = [
 export default function HowToJoin() {
   return (
     <section
-      id="guidelines"
+      id="process"
       className="mx-auto max-w-5xl py-12 md:py-24 lg:py-32"
     >
       <div className="container mx-auto px-4">
@@ -110,7 +110,7 @@ export default function HowToJoin() {
           <Accordion type="single" collapsible className="space-y-6">
             <AccordionItem value="technical">
               <AccordionTrigger>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold" id="technical-guidelines">
                   ❗ For Technical Positions
                 </h3>
               </AccordionTrigger>
@@ -130,7 +130,7 @@ export default function HowToJoin() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:underline"
-                      >
+                      > 
                         Kaggle account.
                       </a>
                     </strong>{" "}
@@ -156,7 +156,7 @@ export default function HowToJoin() {
                         >
                           Kaggle Tutorial for Beginners
                         </a>
-                        &nbsp;(World&apos;s first 4x Kaggle Grandmaster
+                        &nbsp;(World&apos;s first 4x Kaggle Grandmaster)
                       </li>
                       <li>
                         <a
@@ -260,7 +260,7 @@ export default function HowToJoin() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="community-outreach">
+            <AccordionItem value="community-outreach" id="community-outreach-guidelines">
               <AccordionTrigger>
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
                   ❗ For Community Outreach Positions
@@ -307,7 +307,7 @@ export default function HowToJoin() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="general-guidelines">
+            <AccordionItem value="general-guidelines" id="general-guidelines">
               <AccordionTrigger>
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
                   ❗ General Guidelines for All Positions

@@ -16,7 +16,13 @@ const Polaroid: React.FC<PolaroidProps> = ({ src, alt, rotation = 0 }) => (
       height: "300px",
     }}
   >
-    <Image src={src} alt={alt} width={280} height={280} objectFit="cover" />
+    <Image
+      src={src}
+      alt={alt}
+      width={280}
+      height={280}
+      style={{ objectFit: "cover" }}
+    />
     <div className="mt-4 text-center text-normal font-medium">{alt}</div>
   </div>
 );
