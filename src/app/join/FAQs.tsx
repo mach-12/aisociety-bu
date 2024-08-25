@@ -20,27 +20,34 @@ const faqData: FAQ[] = [
   },
   {
     id: "item-2",
-    question: "What is the selection criteria for the Junior Core positions?",
+    question: "What are the selection criteria for the Junior Core positions?",
     answer:
-      "Selection will be based on a combination of factors including your experience, skills, leadership qualities, past contributions in AI, and your vision for the role. We are looking for individuals who demonstrate a strong commitment to our mission and the ability to lead initiatives.",
+      "Selection will be based on a combination of factors including your experience, skills, personal qualities, past contributions in AI, and your vision for the role. We are looking for individuals who demonstrate a strong commitment to our mission and the ability to contribute to the initiatives.",
   },
   {
     id: "item-3",
     question: "What are the responsibilities of a Junior Core member?",
     answer:
-      "As a Junior Core member, you’ll be responsible for leading specific sub-domains within AIS, organizing events, mentoring juniors, and ensuring that our projects align with the society’s goals. You’ll play a key role in shaping the direction of AIS and its initiatives.",
+      "As a Junior Core member, you’ll be responsible for contributing to specific sub-domains within AIS, organizing events, mentoring juniors, and ensuring that our projects/events align with the society’s goals. You’ll play a key role in shaping the direction of AIS and its initiatives.",
   },
   {
     id: "item-4",
     question: "How can I prepare for the selection process?",
     answer:
-      "Check the interview guidelines given above. For Technical Teams, you need to complete two courses on AI and Python. For Community Outreach, You will showcase your work and speaking skills depending on your domain. ",
+      "there are going to be three rounds: Math,Coding skills,Aptitude. to have the best chance of clearing the interview remember to revise on AI maths like deriving the log loss etc, the coding assignment will be on kaggle as for the aptitude test your mind will do just fine :3",
   },
   {
     id: "item-5",
-    question: "What can i expect as a member?",
+    question: "Do I have to complete both mandatory Kaggle courses if I am applying for Techincal Role?",
+    answer: 
+      "Yes, completion of the Python Course and Intro to Machine Learning course on Kaggle is mandatory. These will be verified during the interview. While the Kaggle courses are essential, the interview will also cover your interest in the specific department (CV, RL, GenAI, NLP), your problem-solving approach in AI, and any additional skills you possess.",
+  },
+
+  {
+    id: "item-6",
+    question: "What can I expect as a member?",
     answer:
-      "AIS is a project oriented club with an emphasis on research as well, after your selection to one of the teams you will help with events and actively make projects that may be published on our site or showcased in these events.",
+      "AIS is a project-oriented club with an emphasis on research as well, after your selection to one of the teams you will help with events and actively make projects that may be published on our site or showcased in these events.",
   },
 ];
 
