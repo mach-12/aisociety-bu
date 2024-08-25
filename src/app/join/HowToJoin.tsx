@@ -28,10 +28,11 @@ const steps: Step[] = [
     description: "Forms for Junior Core Technical + Non-Technical positions",
     icon: "📝",
     formLink: "#",
-    dates: "Open now till 1st September 11:59pm",
+    dates: "Open now until 1st September 11:59pm",
     status: "Ongoing",
     applications: 38,
   },
+  
   {
     step: "Step 2",
     title: "Form Shortlisting",
@@ -54,10 +55,7 @@ const steps: Step[] = [
 
 export default function HowToJoin() {
   return (
-    <section
-      id="process"
-      className="mx-auto max-w-5xl py-12 md:py-24 lg:py-32"
-    >
+    <section id="process" className="mx-auto max-w-5xl py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4">
         {/* How to Join Section */}
         <h2 className="text-4xl font-bold text-center mb-12">How to Join</h2>
@@ -93,7 +91,7 @@ export default function HowToJoin() {
                 )}
                 {step.applications && (
                   <div className="mt-4 text-sm text-gray-500">
-                    Applications: {step.applications}
+                    Applications: {step.applications} +
                   </div>
                 )}
               </CardContent>
@@ -110,7 +108,10 @@ export default function HowToJoin() {
           <Accordion type="single" collapsible className="space-y-6">
             <AccordionItem value="technical">
               <AccordionTrigger>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold" id="technical-guidelines">
+                <h3
+                  className="text-xl md:text-2xl lg:text-3xl font-semibold"
+                  id="technical-guidelines"
+                >
                   ❗ For Technical Positions
                 </h3>
               </AccordionTrigger>
@@ -130,7 +131,7 @@ export default function HowToJoin() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:underline"
-                      > 
+                      >
                         Kaggle account.
                       </a>
                     </strong>{" "}
@@ -260,7 +261,10 @@ export default function HowToJoin() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="community-outreach" id="community-outreach-guidelines">
+            <AccordionItem
+              value="community-outreach"
+              id="community-outreach-guidelines"
+            >
               <AccordionTrigger>
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
                   ❗ For Community Outreach Positions
