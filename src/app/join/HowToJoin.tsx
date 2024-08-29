@@ -28,9 +28,9 @@ const steps: Step[] = [
     description: "Forms for Junior Core Technical + Non-Technical positions",
     icon: "📝",
     formLink: "#",
-    dates: "Open now until 1st September 11:59pm",
+    dates: "Open now until 5th September 11:59pm",
     status: "Ongoing",
-    applications: 38,
+    applications: 59,
   },
   
   {
@@ -39,16 +39,16 @@ const steps: Step[] = [
     description:
       "Form review period where you will be judged by the form responses. AI Generated Form Responses will be rejected.",
     icon: "🔍",
-    dates: "1st September-3rd September",
+    dates: "5th September-7th September",
     status: "Upcoming",
   },
   {
     step: "Step 3",
     title: "One-on-One Interview",
     description:
-      "Candidate is interviewed on technical and collaborative skills.",
+      "Candidate is interviewed on technical and soft skills.",
     icon: "🗣️",
-    dates: "To be announced",
+    dates: "7th-11th September",
     status: "Upcoming",
   },
 ];
