@@ -28,8 +28,8 @@ const steps: Step[] = [
     description: "Forms for Junior Core Technical + Non-Technical positions",
     icon: "📝",
     formLink: "#",
-    dates: "Open now until 5th September 11:59pm",
-    status: "Ongoing",
+    dates: "Applications Closed",
+    status: "Completed",
     applications: 150,
   },
   
@@ -40,7 +40,7 @@ const steps: Step[] = [
       "Form review period where you will be judged by the form responses. AI Generated Form Responses will be rejected.",
     icon: "🔍",
     dates: "5th September-7th September",
-    status: "Upcoming",
+    status: "Ongoing",
   },
   {
     step: "Step 3",
