@@ -30,7 +30,7 @@ const steps: Step[] = [
     formLink: "#",
     dates: "Applications Closed",
     status: "Completed",
-    applications: 150,
+    applications: 200,
   },
   
   {
@@ -79,7 +79,7 @@ export default function HowToJoin() {
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-gray-600 mb-4">{step.description}</p>
                 <div className="text-sm text-gray-500 mb-4">{step.dates}</div>
-                {step.formLink && (
+                {/* {step.formLink && (
                   <Link
                     href={contentData.form_link}
                     target="_blank"
@@ -88,7 +88,7 @@ export default function HowToJoin() {
                   >
                     Junior Core Form
                   </Link>
-                )}
+                )} */}
                 {step.applications && (
                   <div className="mt-4 text-sm text-gray-500">
                     Applications: {step.applications} +
