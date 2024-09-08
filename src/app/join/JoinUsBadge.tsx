@@ -8,10 +8,12 @@ export default function JoinUsBadge() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex flex-col items-start space-y-2">
           <h2 className="text-lg font-bold text-primary-foreground">
-            Applications Closed Now
+
+            Applications Closed Now! 
           </h2>
           <p className="text-sm text-primary-foreground">
-            Review and interview period Ongoing.
+             Look out for Volunteer Team forms before events!
+
           </p>
         </div>
         {/* <Link
