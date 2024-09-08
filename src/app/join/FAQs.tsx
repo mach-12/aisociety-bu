@@ -12,6 +12,13 @@ type FAQ = {
 };
 
 const faqData: FAQ[] = [
+
+  {
+    id: "item-0",
+    question: "I missed the deadline, Can I apply now?",
+    answer:
+      "No. We might float volunteer forms later, But the Core Team intake has officially ended.",
+  },
   {
     id: "item-1",
     question: "Who can apply for the Junior Core positions?",

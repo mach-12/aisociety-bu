@@ -28,9 +28,11 @@ const steps: Step[] = [
     description: "Forms for Junior Core Technical + Non-Technical positions",
     icon: "📝",
     formLink: "#",
-    dates: "Were open from August 25 to September 5, 11:59 pm",
+
+    dates: "Applications Closed",
     status: "Completed",
-    applications: 175,
+    applications: 200,
+
   },
   
   {
@@ -40,7 +42,9 @@ const steps: Step[] = [
       "Form review period where you will be judged by the form responses. AI Generated Form Responses will be rejected.",
     icon: "🔍",
     dates: "5th September-7th September",
+
     status: "Completed",
+
   },
   {
     step: "Step 3",
@@ -79,7 +83,7 @@ export default function HowToJoin() {
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-gray-600 mb-4">{step.description}</p>
                 <div className="text-sm text-gray-500 mb-4">{step.dates}</div>
-                {step.formLink && (
+                {/* {step.formLink && (
                   <Link
                     href={contentData.form_link}
                     target="_blank"
@@ -88,7 +92,7 @@ export default function HowToJoin() {
                   >
                     Junior Core Form
                   </Link>
-                )}
+                )} */}
                 {step.applications && (
                   <div className="mt-4 text-sm text-gray-500">
                     Applications: {step.applications} +
